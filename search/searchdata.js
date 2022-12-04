@@ -1,10 +1,11 @@
 var indexSectionsWithContent =
 {
-  0: "bcdfiklmopsu",
+  0: "bcdfgiklmopsu",
   1: "f",
-  2: "cdls",
-  3: "bcfiklmopsu",
-  4: "cs"
+  2: "cdglms",
+  3: "m",
+  4: "bcfiklmopsu",
+  5: "cs"
 };
 
 var indexSectionNames =
@@ -12,8 +13,9 @@ var indexSectionNames =
   0: "all",
   1: "namespaces",
   2: "files",
-  3: "variables",
-  4: "pages"
+  3: "functions",
+  4: "variables",
+  5: "pages"
 };
 
 var indexSectionLabels =
@@ -21,7 +23,8 @@ var indexSectionLabels =
   0: "All",
   1: "Namespaces",
   2: "Files",
-  3: "Variables",
-  4: "Pages"
+  3: "Functions",
+  4: "Variables",
+  5: "Pages"
 };
 

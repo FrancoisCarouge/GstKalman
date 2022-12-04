@@ -46,16 +46,20 @@ var NAVTREE =
     [ "Namespaces", "namespaces.xhtml", [
       [ "Namespace List", "namespaces.xhtml", "namespaces_dup" ]
     ] ],
-    [ "File Members", "globals.xhtml", [
-      [ "All", "globals.xhtml", null ],
-      [ "Variables", "globals_vars.xhtml", null ]
+    [ "Files", "files.xhtml", [
+      [ "File List", "files.xhtml", "files_dup" ],
+      [ "File Members", "globals.xhtml", [
+        [ "All", "globals.xhtml", null ],
+        [ "Functions", "globals_func.xhtml", null ],
+        [ "Variables", "globals_vars.xhtml", null ]
+      ] ]
     ] ]
   ] ]
 ];
 
 var NAVTREEINDEX =
 [
-"globals.xhtml"
+"dir_533ca38e4d6dcb24d3c950d504c67ecf.xhtml"
 ];
 
 var SYNCONMSG = 'click to disable panel synchronisation';

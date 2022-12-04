@@ -26,4 +26,10 @@ var menudata={children:[
 {text:"Main Page",url:"index.xhtml"},
 {text:"Related Pages",url:"pages.xhtml"},
 {text:"Namespaces",url:"namespaces.xhtml",children:[
-{text:"Namespace List",url:"namespaces.xhtml"}]}]}
+{text:"Namespace List",url:"namespaces.xhtml"}]},
+{text:"Files",url:"files.xhtml",children:[
+{text:"File List",url:"files.xhtml"},
+{text:"File Members",url:"globals.xhtml",children:[
+{text:"All",url:"globals.xhtml"},
+{text:"Functions",url:"globals_func.xhtml"},
+{text:"Variables",url:"globals_vars.xhtml"}]}]}]}
