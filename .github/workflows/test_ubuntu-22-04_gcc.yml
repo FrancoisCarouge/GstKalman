@@ -1,0 +1,20 @@
+name: "Test: Ubuntu 22.04 GCC"
+
+on:
+  push:
+    branches: [ develop ]
+  pull_request:
+    branches: [ develop ]
+
+jobs:
+  build:
+    runs-on: ubuntu-22.04
+    steps:
+    - name: Checkout
+      uses: actions/checkout@v3.1.0
+    - name: Install
+    - name: Build
+      run: |
+        cmake -B "build" .
+        cmake --build "build" --parallel 4
+        ctest --test-dir "build" --tests-regex "kalman_test" --output-on-failure --parallel 4

@@ -1,0 +1,25 @@
+name: "Test Address: Sanitizer"
+
+on:
+  push:
+    branches: [ develop ]
+  pull_request:
+    branches: [ develop ]
+
+jobs:
+  build:
+    runs-on: ubuntu-22.04
+    steps:
+    - name: Checkout
+      uses: actions/checkout@v3.1.0
+    - name: Update
+      run: sudo apt update
+    - name: Install
+      run: |
+        sudo apt install gcc-12 g++-12
+    - name: Build
+      run: |
+        gcc-12 source/*.cpp -Iinclude \
+          -std=c++23 -g -fsanitize=address -fsanitize-address-use-after-scope -fno-omit-frame-pointer -lstdc++
+    - name: Test
+      run: ASAN_OPTIONS=verbosity=2:strict_string_checks=1:detect_stack_use_after_return=1:check_initialization_order=1:strict_init_order=1 ./a.out

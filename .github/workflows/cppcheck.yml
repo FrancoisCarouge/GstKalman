@@ -1,0 +1,32 @@
+name: "CppCheck"
+
+on:
+  push:
+    branches: [ develop ]
+  pull_request:
+    branches: [ develop ]
+
+jobs:
+  build:
+    runs-on: ubuntu-22.04
+    steps:
+    - name: Checkout
+      uses: actions/checkout@v3.1.0
+    - name: Install
+      run: |
+        ( cd /tmp
+          git clone https://github.com/danmar/cppcheck.git
+          mkdir cppcheck/build
+          ( cd cppcheck/build
+            cmake ..
+            cmake --build . --parallel
+            sudo cmake --install . ) )
+    - name: Verify
+      # unusedStructMember https://trac.cppcheck.net/ticket/10699
+      run: |
+        cppcheck \
+          --enable=all \
+          --error-exitcode=1 \
+          --verbose \
+          -I include \
+          .
