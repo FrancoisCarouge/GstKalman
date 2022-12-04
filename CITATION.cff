@@ -1,0 +1,18 @@
+cff-version: 1.2.0
+message: "If you use this software, please cite it using these metadata."
+title: "GStreamer Kalman Filter Video Plugin in C++"
+authors:
+  - given-names: François
+    family-names: Carouge
+    email: francois.carouge@gmail.com
+type: software
+license: Unlicense
+repository-code: "https://github.com/FrancoisCarouge/GstKalman"
+url: "https://francoiscarouge.github.io/GstKalman"
+version: 0.1.0
+keywords:
+  - c++
+  - kalman
+  - filter
+  - video
+  - gstreamer
