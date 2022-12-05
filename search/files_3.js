@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['license_2etxt_0',['LICENSE.txt',['../_l_i_c_e_n_s_e_8txt.xhtml',1,'']]]
+  ['install_2emd_0',['INSTALL.md',['../_i_n_s_t_a_l_l_8md.xhtml',1,'']]]
 ];

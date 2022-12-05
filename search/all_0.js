@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['binary_0',['binary',['../_l_i_c_e_n_s_e_8txt.xhtml#ab8bbc27d8fe80567e920dc10c46af49e',1,'LICENSE.txt']]]
+  ['a_20gstreamer_20kalman_20filter_20video_20plugin_20in_20c_2b_2b_0',['A GStreamer Kalman Filter Video Plugin in C++',['../index.xhtml',1,'']]]
 ];
