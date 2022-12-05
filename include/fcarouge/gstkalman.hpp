@@ -36,7 +36,7 @@ OTHER DEALINGS IN THE SOFTWARE.
 
 For more information, please refer to <https://unlicense.org> */
 
-#ifndef GSTKALMAN_HPP
-#define GSTKALMAN_HPP
+#ifndef FCAROUGE_GSTKALMAN_HPP
+#define FCAROUGE_GSTKALMAN_HPP
 
-#endif // GSTKALMAN_HPP
+#endif // FCAROUGE_GSTKALMAN_HPP
