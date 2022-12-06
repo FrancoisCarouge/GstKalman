@@ -17,8 +17,16 @@ jobs:
         wget https://apt.llvm.org/llvm.sh
         chmod +x llvm.sh
         sudo ./llvm.sh 15 all
+        ( cd /tmp
+          git clone --depth 1 https://github.com/FrancoisCarouge/Kalman.git
+          cmake -S "Kalman" -B "Kalman/build" 
+          cmake --build "Kalman/build" --parallel 4
+          sudo cmake --install "Kalman/build" )
     - name: Verify
       run: |
-        FILES=`find . -iname *.hpp`
-        clang-tidy-15 ${FILES} --warnings-as-errors=* -- \
-          -x c++ -Iinclude -Wall -Wextra -pedantic -std=c++2b -stdlib=libc++
+        clang-tidy-15 \
+          `find . -iname "*.hpp" -o -iname "*.cpp"` \
+          -header-filter=.* --warnings-as-errors=* -- -x c++ \
+          -isystem /usr/local/include -isystem /usr/local/include/fcarouge \
+          -Iinclude \
+          -Wall -Wextra -pedantic -std=c++2b -stdlib=libc++

@@ -17,9 +17,14 @@ jobs:
     - name: Install
       run: |
         sudo apt install gcc-12 g++-12
+        ( cd /tmp
+          git clone --depth 1 https://github.com/FrancoisCarouge/Kalman.git
+          cmake -S "Kalman" -B "Kalman/build" 
+          cmake --build "Kalman/build" --parallel 4
+          sudo cmake --install "Kalman/build" )
     - name: Build
       run: |
-        gcc-12 source/*.cpp -Iinclude \
+        gcc-12 source/*.cpp -Iinclude -I/usr/local/include/fcarouge \
           -std=c++23 -g -fsanitize=thread -lstdc++
     - name: Test
       run: TSAN_OPTIONS=verbosity=2 ./a.out

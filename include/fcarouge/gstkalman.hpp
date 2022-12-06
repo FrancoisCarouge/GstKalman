@@ -39,4 +39,6 @@ For more information, please refer to <https://unlicense.org> */
 #ifndef FCAROUGE_GSTKALMAN_HPP
 #define FCAROUGE_GSTKALMAN_HPP
 
+#include "fcarouge/kalman.hpp"
+
 #endif // FCAROUGE_GSTKALMAN_HPP
