@@ -36,4 +36,8 @@ OTHER DEALINGS IN THE SOFTWARE.
 
 For more information, please refer to <https://unlicense.org> ]]
 
+add_library(gstkalman_library SHARED "gstkalman.cpp")
+set_target_properties(gstkalman_library PROPERTIES OUTPUT_NAME "gstkalman")
+target_link_libraries(gstkalman_library PRIVATE gstkalman)
+
 add_library(gstkalman_main "main.cpp")

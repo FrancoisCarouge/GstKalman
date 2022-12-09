@@ -17,9 +17,14 @@ jobs:
     - name: Install
       run: |
         sudo apt install gcc-12 g++-12
+        ( cd /tmp
+          git clone --depth 1 https://github.com/FrancoisCarouge/Kalman.git
+          cmake -S "Kalman" -B "Kalman/build" 
+          cmake --build "Kalman/build" --parallel 4
+          sudo cmake --install "Kalman/build" )
     - name: Build
       run: |
-        gcc-12 source/*.cpp -Iinclude \
+        gcc-12 source/*.cpp -Iinclude -I/usr/local/include/fcarouge \
           -std=c++23 -g -fsanitize=address -fsanitize-address-use-after-scope -fno-omit-frame-pointer -lstdc++
     - name: Test
       run: ASAN_OPTIONS=verbosity=2:strict_string_checks=1:detect_stack_use_after_return=1:check_initialization_order=1:strict_init_order=1 ./a.out

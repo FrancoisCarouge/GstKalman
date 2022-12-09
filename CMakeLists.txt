@@ -50,6 +50,14 @@ set(CPACK_PACKAGE_DESCRIPTION_FILE "${CMAKE_SOURCE_DIR}/README.md")
 set(CPACK_RESOURCE_FILE_LICENSE "${CMAKE_SOURCE_DIR}/LICENSE.txt")
 
 include(CPack)
+include(FetchContent)
+
+FetchContent_Declare(
+  kalman
+  GIT_REPOSITORY "https://github.com/FrancoisCarouge/Kalman.git"
+  GIT_TAG "develop")
+
+FetchContent_MakeAvailable(kalman)
 
 add_subdirectory(include)
 add_subdirectory(source)
