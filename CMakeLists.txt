@@ -48,16 +48,20 @@ project(
 set(CPACK_PACKAGE_CHECKSUM "SHA512")
 set(CPACK_PACKAGE_DESCRIPTION_FILE "${CMAKE_SOURCE_DIR}/README.md")
 set(CPACK_RESOURCE_FILE_LICENSE "${CMAKE_SOURCE_DIR}/LICENSE.txt")
+set(CMAKE_MODULE_PATH "${CMAKE_CURRENT_SOURCE_DIR}/cmake")
 
 include(CPack)
+include(CTest)
 include(FetchContent)
+include(FindPackageHandleStandardArgs)
 
-FetchContent_Declare(
-  kalman
-  GIT_REPOSITORY "https://github.com/FrancoisCarouge/Kalman.git"
-  GIT_TAG "develop")
+find_package(PkgConfig)
 
-FetchContent_MakeAvailable(kalman)
+find_package(fmt)
+find_package(GLib)
+find_package(GObject)
+find_package(GStreamer)
+find_package(kalman)
+find_package(ScopeGuard)
 
-add_subdirectory(include)
 add_subdirectory(source)

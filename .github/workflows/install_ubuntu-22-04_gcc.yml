@@ -12,6 +12,38 @@ jobs:
     steps:
     - name: Checkout
       uses: actions/checkout@v3.1.0
+    - name: Install
+      # https://bugs.launchpad.net/ubuntu/+source/llvm-toolchain-14/+bug/1989124
+      run: |
+        sudo apt remove -y libunwind-14-dev
+        sudo apt install \
+          libgstreamer1.0-dev \
+          libgstreamer-plugins-base1.0-dev
+        ( cd /tmp
+          git clone --depth 1 "https://github.com/FrancoisCarouge/kalman"
+          cmake -S "kalman" -B "kalman/build"
+          cmake --build "kalman/build" --parallel 4
+          sudo cmake --install "kalman/build" )
+        ( cd /tmp
+          git clone --depth 1 "https://github.com/fmtlib/fmt"
+          cmake -S "fmt" -B "fmt/build"
+          cmake --build "fmt/build" --parallel 4
+          sudo cmake --install "fmt/build" )
+        ( cd /tmp
+          git clone --depth 1 "https://github.com/catchorg/catch2"
+          cmake -S "catch2" -B "catch2/build"
+          cmake --build "catch2/build" --parallel 4
+          sudo cmake --install "catch2/build" )
+        ( cd /tmp
+          git clone --depth 1 "https://github.com/rollbear/trompeloeil"
+          cmake -S "trompeloeil" -B "trompeloeil/build"
+          cmake --build "trompeloeil/build" --parallel 4
+          sudo cmake --install "trompeloeil/build" )
+        ( cd /tmp
+          git clone --depth 1 "https://github.com/offa/scope-guard"
+          cmake -S "scope-guard" -B "scope-guard/build"
+          cmake --build "scope-guard/build" --parallel 4
+          sudo cmake --install "scope-guard/build" )
     - name: Build
       run: |
         cmake -B "build" .

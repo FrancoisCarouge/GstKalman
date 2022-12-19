@@ -15,4 +15,4 @@ jobs:
     - name: Install
       run: pip install cmakelang
     - name: Verify
-      run: cmake-format --check CMakeLists.txt
+      run: cmake-format --check `find . -iname "CMakeLists.txt" -o -iname "*.cmake"`
