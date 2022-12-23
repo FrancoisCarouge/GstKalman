@@ -1,4 +1,4 @@
-/*  __          _      __  __          _   _
+#[[ __          _      __  __          _   _
 | |/ /    /\   | |    |  \/  |   /\   | \ | |
 | ' /    /  \  | |    | \  / |  /  \  |  \| |
 |  <    / /\ \ | |    | |\/| | / /\ \ | . ` |
@@ -34,11 +34,27 @@ OTHER LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE,
 ARISING FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR
 OTHER DEALINGS IN THE SOFTWARE.
 
-For more information, please refer to <https://unlicense.org> */
+For more information, please refer to <https://unlicense.org> ]]
 
-#ifndef FCAROUGE_GSTKALMAN_HPP
-#define FCAROUGE_GSTKALMAN_HPP
+add_library(gstkalman_glib INTERFACE)
 
-#include "fcarouge/kalman.hpp"
+pkg_check_modules(GLIB glib-2.0)
 
-#endif // FCAROUGE_GSTKALMAN_HPP
+find_path(
+  GLIB_INCLUDE
+  NAMES "glib.h"
+  PATH_SUFFIXES "glib-2.0")
+find_path(
+  GLIBCONFIG_INCLUDE
+  NAMES "glibconfig.h"
+  HINTS ${GLIB_INCLUDE_DIRS} ${GLIB_INCLUDEDIR}
+  PATH_SUFFIXES "glib-2.0/include")
+
+find_library(GLIB_LIBRARY NAMES "glib-2.0")
+
+find_package_handle_standard_args(GLib DEFAULT_MSG GLIB_LIBRARY GLIB_INCLUDE)
+
+target_include_directories(gstkalman_glib INTERFACE ${GLIB_INCLUDE}
+                                                    ${GLIBCONFIG_INCLUDE})
+
+target_link_libraries(gstkalman_glib INTERFACE ${GLIB_LIBRARY})

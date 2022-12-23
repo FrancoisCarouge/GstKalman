@@ -36,36 +36,19 @@ OTHER DEALINGS IN THE SOFTWARE.
 
 For more information, please refer to <https://unlicense.org> ]]
 
-if(WIN32)
-  set(OPTIONS "/EHsc" "/W4")
-else()
-  set(OPTIONS
-      "-ansi"
-      "-fno-check-new"
-      "-fno-common"
-      "-fstrict-aliasing"
-      "-pedantic"
-      "-Wall"
-      "-Wcast-align"
-      "-Wchar-subscripts"
-      "-Wdouble-promotion"
-      "-Wenum-conversion"
-      "-Werror"
-      "-Wextra"
-      "-Wformat-security"
-      "-Wno-long-long"
-      "-Wno-psabi"
-      "-Wno-variadic-macros"
-      "-Wnon-virtual-dtor"
-      "-Wpointer-arith"
-      "-Wshadow"
-      "-Wundef"
-      "-Wunused-local-typedefs"
-      "-Wwrite-strings")
-endif()
+add_library(gstkalman_gstreamer INTERFACE)
 
-add_library(gstkalman INTERFACE)
-target_include_directories(gstkalman INTERFACE ".")
-target_compile_options(gstkalman INTERFACE ${OPTIONS})
-target_compile_features(gstkalman INTERFACE cxx_std_23)
-target_link_libraries(gstkalman INTERFACE kalman)
+find_path(
+  GSTREAMER_INCLUDE
+  NAMES "gst/gst.h"
+  PATH_SUFFIXES "gstreamer-1.0")
+
+find_library(GSTREAMER_LIBRARY NAMES "gstreamer-1.0")
+find_library(GSTBASE_LIBRARY NAMES "gstbase-1.0")
+
+find_package_handle_standard_args(GStreamer DEFAULT_MSG GSTREAMER_LIBRARY
+                                  GSTREAMER_INCLUDE)
+
+target_include_directories(gstkalman_gstreamer INTERFACE ${GSTREAMER_INCLUDE})
+target_link_libraries(gstkalman_gstreamer INTERFACE ${GSTREAMER_LIBRARY})
+target_link_libraries(gstkalman_gstreamer INTERFACE ${GSTBASE_LIBRARY})

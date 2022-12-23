@@ -36,38 +36,18 @@ OTHER DEALINGS IN THE SOFTWARE.
 
 For more information, please refer to <https://unlicense.org> ]]
 
-if(WIN32)
-  set(OPTIONS "/EHsc" "/W4")
-else()
-  set(OPTIONS
-      "-ansi"
-      "-fno-check-new"
-      "-fno-common"
-      "-fstrict-aliasing"
-      "-pedantic"
-      "-Wall"
-      "-Wcast-align"
-      "-Wchar-subscripts"
-      "-Wdouble-promotion"
-      "-Wenum-conversion"
-      "-Werror"
-      "-Wextra"
-      "-Wformat-security"
-      "-Wno-long-long"
-      "-Wno-psabi"
-      "-Wno-variadic-macros"
-      "-Wnon-virtual-dtor"
-      "-Wpointer-arith"
-      "-Wshadow"
-      "-Wundef"
-      "-Wunused-local-typedefs"
-      "-Wwrite-strings")
-endif()
+add_library(gstkalman_gobject INTERFACE)
 
-add_library(gstkalman SHARED "gstkalman.cpp")
-target_compile_options(gstkalman PUBLIC ${OPTIONS})
-target_compile_features(gstkalman PUBLIC cxx_std_23)
-target_link_libraries(gstkalman PRIVATE gstkalman_glib gstkalman_gobject
-                                        gstkalman_gstreamer kalman::kalman)
+find_path(
+  GOBJECT_INCLUDE
+  NAMES "gobject/gobject.h"
+  PATH_SUFFIXES "glib-2.0")
 
-add_library(gstkalman_main "main.cpp")
+find_library(GOBJECT_LIBRARY NAMES "gobject-2.0")
+
+find_package_handle_standard_args(GObject DEFAULT_MSG GOBJECT_LIBRARY
+                                  GOBJECT_INCLUDE)
+
+target_include_directories(gstkalman_gobject INTERFACE ${GOBJECT_INCLUDE})
+
+target_link_libraries(gstkalman_gobject INTERFACE ${GOBJECT_LIBRARY})
