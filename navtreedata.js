@@ -39,18 +39,18 @@ var NAVTREE =
       [ "License", "index.xhtml#autotoc_md28", null ]
     ] ],
     [ "Contributor Covenant Code of Conduct", "md__github_workspace__c_o_d_e__o_f__c_o_n_d_u_c_t.xhtml", [
-      [ "Our Pledge", "md__github_workspace__c_o_d_e__o_f__c_o_n_d_u_c_t.xhtml#autotoc_md6", null ],
-      [ "Our Standards", "md__github_workspace__c_o_d_e__o_f__c_o_n_d_u_c_t.xhtml#autotoc_md7", null ],
-      [ "Our Responsibilities", "md__github_workspace__c_o_d_e__o_f__c_o_n_d_u_c_t.xhtml#autotoc_md8", null ],
-      [ "Scope", "md__github_workspace__c_o_d_e__o_f__c_o_n_d_u_c_t.xhtml#autotoc_md9", null ],
-      [ "Enforcement", "md__github_workspace__c_o_d_e__o_f__c_o_n_d_u_c_t.xhtml#autotoc_md10", null ],
-      [ "Attribution", "md__github_workspace__c_o_d_e__o_f__c_o_n_d_u_c_t.xhtml#autotoc_md11", null ]
+      [ "Our Pledge", "md__github_workspace__c_o_d_e__o_f__c_o_n_d_u_c_t.xhtml#autotoc_md1", null ],
+      [ "Our Standards", "md__github_workspace__c_o_d_e__o_f__c_o_n_d_u_c_t.xhtml#autotoc_md2", null ],
+      [ "Our Responsibilities", "md__github_workspace__c_o_d_e__o_f__c_o_n_d_u_c_t.xhtml#autotoc_md3", null ],
+      [ "Scope", "md__github_workspace__c_o_d_e__o_f__c_o_n_d_u_c_t.xhtml#autotoc_md4", null ],
+      [ "Enforcement", "md__github_workspace__c_o_d_e__o_f__c_o_n_d_u_c_t.xhtml#autotoc_md5", null ],
+      [ "Attribution", "md__github_workspace__c_o_d_e__o_f__c_o_n_d_u_c_t.xhtml#autotoc_md6", null ]
     ] ],
     [ "Contributing", "md__github_workspace__c_o_n_t_r_i_b_u_t_i_n_g.xhtml", [
-      [ "Code of Conduct", "md__github_workspace__c_o_n_t_r_i_b_u_t_i_n_g.xhtml#autotoc_md1", null ],
-      [ "Reporting Bugs", "md__github_workspace__c_o_n_t_r_i_b_u_t_i_n_g.xhtml#autotoc_md2", null ],
-      [ "Requesting Features", "md__github_workspace__c_o_n_t_r_i_b_u_t_i_n_g.xhtml#autotoc_md3", null ],
-      [ "Security Policy", "md__github_workspace__c_o_n_t_r_i_b_u_t_i_n_g.xhtml#autotoc_md4", null ]
+      [ "Code of Conduct", "md__github_workspace__c_o_n_t_r_i_b_u_t_i_n_g.xhtml#autotoc_md8", null ],
+      [ "Reporting Bugs", "md__github_workspace__c_o_n_t_r_i_b_u_t_i_n_g.xhtml#autotoc_md9", null ],
+      [ "Requesting Features", "md__github_workspace__c_o_n_t_r_i_b_u_t_i_n_g.xhtml#autotoc_md10", null ],
+      [ "Security Policy", "md__github_workspace__c_o_n_t_r_i_b_u_t_i_n_g.xhtml#autotoc_md11", null ]
     ] ],
     [ "Installation", "md__github_workspace__i_n_s_t_a_l_l.xhtml", [
       [ "From Repository Sources", "md__github_workspace__i_n_s_t_a_l_l.xhtml#autotoc_md13", null ],
@@ -81,7 +81,7 @@ var NAVTREE =
 
 var NAVTREEINDEX =
 [
-"dir_533ca38e4d6dcb24d3c950d504c67ecf.xhtml"
+"dir_b2f33c71d4aa5e7af42a1ca61ff5af1b.xhtml"
 ];
 
 var SYNCONMSG = 'click to disable panel synchronisation';
