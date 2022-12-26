@@ -52,6 +52,9 @@ jobs:
         clang-tidy-15 \
           `find . -iname "*.hpp" -o -iname "*.cpp"` \
           -header-filter=.* --warnings-as-errors=* -- -x c++ \
-          -isystem /usr/local/include -isystem /usr/local/include/fcarouge \
-          -Iinclude \
+          -isystem /usr/include/glib-2.0 \
+          -isystem /usr/include/gstreamer-1.0 \
+          -isystem /usr/lib/x86_64-linux-gnu/glib-2.0/include \
+          -isystem /usr/local/include \
+          -isystem /usr/local/include/fcarouge \
           -Wall -Wextra -pedantic -std=c++2b -stdlib=libc++
