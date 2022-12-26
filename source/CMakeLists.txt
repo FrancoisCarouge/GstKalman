@@ -67,7 +67,8 @@ endif()
 add_library(gstkalman SHARED "gstkalman.cpp")
 target_compile_options(gstkalman PUBLIC ${OPTIONS})
 target_compile_features(gstkalman PUBLIC cxx_std_23)
-target_link_libraries(gstkalman PRIVATE gstkalman_glib gstkalman_gobject
-                                        gstkalman_gstreamer kalman::kalman)
+target_link_libraries(
+  gstkalman PRIVATE gstkalman_glib gstkalman_gobject gstkalman_gstreamer
+                    kalman::kalman TBB::tbb)
 
 add_library(gstkalman_main "main.cpp")
