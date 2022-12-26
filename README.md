@@ -29,6 +29,7 @@
 Become a sponsor today! Support this project with coffee and infrastructure!
 
 [![Sponsor](https://img.shields.io/badge/Support-Sponsor-brightgreen)](http://paypal.me/francoiscarouge)
+[![FOSSA Status](https://app.fossa.com/api/projects/git%2Bgithub.com%2FFrancoisCarouge%2FGstKalman.svg?type=shield)](https://app.fossa.com/projects/git%2Bgithub.com%2FFrancoisCarouge%2FGstKalman?ref=badge_shield)
 
 ## Corporate Sponsor
 
@@ -70,3 +71,5 @@ ARISING FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR
 OTHER DEALINGS IN THE SOFTWARE.
 
 For more information, please refer to <https://unlicense.org>
+
+[![FOSSA Status](https://app.fossa.com/api/projects/git%2Bgithub.com%2FFrancoisCarouge%2FGstKalman.svg?type=large)](https://app.fossa.com/projects/git%2Bgithub.com%2FFrancoisCarouge%2FGstKalman?ref=badge_large)
