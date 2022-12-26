@@ -56,5 +56,10 @@ jobs:
           --enable=all \
           --error-exitcode=1 \
           --verbose \
-          -I include \
+          -isystem /usr/include/glib-2.0 \
+          -isystem /usr/include/gstreamer-1.0 \
+          -isystem /usr/lib/x86_64-linux-gnu/glib-2.0/include \
+          -isystem /usr/local/include \
+          -isystem /usr/local/include/fcarouge \
+          --suppress=*:/usr/include/* \
           .

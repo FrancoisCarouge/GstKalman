@@ -12,8 +12,7 @@ jobs:
     steps:
     - name: Checkout
       uses: actions/checkout@v3.1.0
-    - name: Update
-      run: sudo apt update
+    - name: Install
       # https://bugs.launchpad.net/ubuntu/+source/llvm-toolchain-14/+bug/1989124
       run: |
         sudo apt remove -y libunwind-14-dev
@@ -47,7 +46,18 @@ jobs:
           sudo cmake --install "scope-guard/build" )
     - name: Build
       run: |
-        gcc-12 source/*.cpp -Iinclude -I/usr/local/include/fcarouge \
-          -std=c++23 -g -fsanitize=undefined -lstdc++
+        gcc-12 source/*.cpp \
+          -isystem /usr/include/glib-2.0 \
+          -isystem /usr/include/gstreamer-1.0 \
+          -isystem /usr/lib/x86_64-linux-gnu/glib-2.0/include \
+          -isystem /usr/local/include \
+          -isystem /usr/local/include/fcarouge \
+          -std=c++23 -g -fsanitize=undefined \
+          -L/usr/lib/x86_64-linux-gnu \
+          -lglib-2.0 \
+          -lgobject-2.0 \
+          -lgstbase-1.0 \
+          -lgstreamer-1.0 \
+          -lstdc++
     - name: Test
       run: UBSAN_OPTIONS=verbosity=2 ./a.out
