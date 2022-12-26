@@ -85,18 +85,123 @@ $(document).ready(function(){initNavTree('gstkalman_8cpp.xhtml',''); initResizab
 </div>
 
 <div class="header">
+  <div class="summary">
+<a href="#nested-classes">Classes</a> &#124;
+<a href="#namespaces">Namespaces</a> &#124;
+<a href="#define-members">Macros</a> &#124;
+<a href="#func-members">Functions</a> &#124;
+<a href="#var-members">Variables</a>  </div>
   <div class="headertitle"><div class="title">gstkalman.cpp File Reference</div></div>
 </div><!--header-->
 <div class="contents">
 
+<p>The GStreamer Kalman filter video plugin element implementation.  
+<a href="#details">More...</a></p>
+<div class="textblock"><code>#include &lt;string_view&gt;</code><br />
+<code>#include &lt;glib-object.h&gt;</code><br />
+<code>#include &lt;gst/base/gstbasetransform.h&gt;</code><br />
+<code>#include &lt;gst/gst.h&gt;</code><br />
+</div><div class="textblock"><div id="dynsection-0" onclick="return toggleVisibility(this)" class="dynheader closed" style="cursor:pointer;">
+  <img id="dynsection-0-trigger" src="closed.png" alt="+"/> Include dependency graph for gstkalman.cpp:</div>
+<div id="dynsection-0-summary" class="dynsummary" style="display:block;">
+</div>
+<div id="dynsection-0-content" class="dyncontent" style="display:none;">
+<div class="center"><iframe scrolling="no" frameborder="0" src="gstkalman_8cpp__incl.svg" width="520" height="127"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe>
+</div>
+</div>
+</div>
 <p><a href="gstkalman_8cpp_source.xhtml">Go to the source code of this file.</a></p>
+<table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="nested-classes" name="nested-classes"></a>
+Classes</h2></td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structanonymous__namespace_02gstkalman_8cpp_03_1_1___gst_kalman.xhtml">anonymous_namespace{gstkalman.cpp}::_GstKalman</a></td></tr>
+<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">The GStreamer Kalman filter video plugin element datastructure.  <a href="structanonymous__namespace_02gstkalman_8cpp_03_1_1___gst_kalman.xhtml#details">More...</a><br /></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="namespaces" name="namespaces"></a>
+Namespaces</h2></td></tr>
+<tr class="memitem:namespaceanonymous__namespace_02gstkalman_8cpp_03"><td class="memItemLeft" align="right" valign="top">namespace &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespaceanonymous__namespace_02gstkalman_8cpp_03.xhtml">anonymous_namespace{gstkalman.cpp}</a></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="define-members" name="define-members"></a>
+Macros</h2></td></tr>
+<tr class="memitem:aca8570fb706c81df371b7f9bc454ae03"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="gstkalman_8cpp.xhtml#aca8570fb706c81df371b7f9bc454ae03">PACKAGE</a>&#160;&#160;&#160;name.data()</td></tr>
+<tr class="separator:aca8570fb706c81df371b7f9bc454ae03"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="func-members" name="func-members"></a>
+Functions</h2></td></tr>
+<tr class="memitem:a34f13e012528daaa546ef77e86378633"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespaceanonymous__namespace_02gstkalman_8cpp_03.xhtml#a34f13e012528daaa546ef77e86378633">anonymous_namespace{gstkalman.cpp}::G_DEFINE_TYPE</a> (GstKalman, gst_kalman, GST_TYPE_BASE_TRANSFORM)</td></tr>
+<tr class="separator:a34f13e012528daaa546ef77e86378633"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a282faaab85877b074d23a1057e361d20"><td class="memItemLeft" align="right" valign="top">auto&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespaceanonymous__namespace_02gstkalman_8cpp_03.xhtml#a282faaab85877b074d23a1057e361d20">anonymous_namespace{gstkalman.cpp}::initialize</a> (GstPlugin *plugin) -&gt; gboolean</td></tr>
+<tr class="memdesc:a282faaab85877b074d23a1057e361d20"><td class="mdescLeft">&#160;</td><td class="mdescRight">Registers the plugin element.  <a href="namespaceanonymous__namespace_02gstkalman_8cpp_03.xhtml#a282faaab85877b074d23a1057e361d20">More...</a><br /></td></tr>
+<tr class="separator:a282faaab85877b074d23a1057e361d20"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ab2d338224aa3266bd923e4124b228344"><td class="memItemLeft" align="right" valign="top">auto&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespaceanonymous__namespace_02gstkalman_8cpp_03.xhtml#ab2d338224aa3266bd923e4124b228344">anonymous_namespace{gstkalman.cpp}::gst_kalman_transform_in_place</a> (GstBaseTransform *element_base, GstBuffer *output) -&gt; GstFlowReturn</td></tr>
+<tr class="memdesc:ab2d338224aa3266bd923e4124b228344"><td class="mdescLeft">&#160;</td><td class="mdescRight">Processes the data buffer in-place.  <a href="namespaceanonymous__namespace_02gstkalman_8cpp_03.xhtml#ab2d338224aa3266bd923e4124b228344">More...</a><br /></td></tr>
+<tr class="separator:ab2d338224aa3266bd923e4124b228344"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a4cce0c4941a0f19778ca1d812ea608b0"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespaceanonymous__namespace_02gstkalman_8cpp_03.xhtml#a4cce0c4941a0f19778ca1d812ea608b0">anonymous_namespace{gstkalman.cpp}::GST_PLUGIN_DEFINE</a> (GST_VERSION_MAJOR, GST_VERSION_MINOR, kalman, description.data(), initialize, version.data(), license.data(), name.data(), origin.data()) GST_ELEMENT_REGISTER_DEFINE(kalman</td></tr>
+<tr class="separator:a4cce0c4941a0f19778ca1d812ea608b0"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ae3f768d24a8ae50905560e110bfb4867"><td class="memItemLeft" align="right" valign="top">name&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespaceanonymous__namespace_02gstkalman_8cpp_03.xhtml#ae3f768d24a8ae50905560e110bfb4867">anonymous_namespace{gstkalman.cpp}::data</a> ()</td></tr>
+<tr class="separator:ae3f768d24a8ae50905560e110bfb4867"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ac4e908ffaf10d9fd4d5581c3a097fa8c"><td class="memItemLeft" align="right" valign="top">name&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespaceanonymous__namespace_02gstkalman_8cpp_03.xhtml#ac4e908ffaf10d9fd4d5581c3a097fa8c">anonymous_namespace{gstkalman.cpp}::gst_kalman_get_type</a> ())</td></tr>
+<tr class="separator:ac4e908ffaf10d9fd4d5581c3a097fa8c"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a46ad1d4a4b1958355e4fd6ed7c8e2ef8"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespaceanonymous__namespace_02gstkalman_8cpp_03.xhtml#a46ad1d4a4b1958355e4fd6ed7c8e2ef8">anonymous_namespace{gstkalman.cpp}::gst_kalman_class_init</a> (GstKalmanClass *klass)</td></tr>
+<tr class="memdesc:a46ad1d4a4b1958355e4fd6ed7c8e2ef8"><td class="mdescLeft">&#160;</td><td class="mdescRight">Defines the element details.  <a href="namespaceanonymous__namespace_02gstkalman_8cpp_03.xhtml#a46ad1d4a4b1958355e4fd6ed7c8e2ef8">More...</a><br /></td></tr>
+<tr class="separator:a46ad1d4a4b1958355e4fd6ed7c8e2ef8"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a878ebad5cd43ebe07593d3c3a5781061"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespaceanonymous__namespace_02gstkalman_8cpp_03.xhtml#a878ebad5cd43ebe07593d3c3a5781061">anonymous_namespace{gstkalman.cpp}::gst_kalman_init</a> (GstKalman *element)</td></tr>
+<tr class="memdesc:a878ebad5cd43ebe07593d3c3a5781061"><td class="mdescLeft">&#160;</td><td class="mdescRight">Instantiates the element.  <a href="namespaceanonymous__namespace_02gstkalman_8cpp_03.xhtml#a878ebad5cd43ebe07593d3c3a5781061">More...</a><br /></td></tr>
+<tr class="separator:a878ebad5cd43ebe07593d3c3a5781061"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="var-members" name="var-members"></a>
+Variables</h2></td></tr>
+<tr class="memitem:ad1951e750173d4b4cb5716bc91387632"><td class="memItemLeft" align="right" valign="top">constexpr std::string_view&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespaceanonymous__namespace_02gstkalman_8cpp_03.xhtml#ad1951e750173d4b4cb5716bc91387632">anonymous_namespace{gstkalman.cpp}::name</a> {&quot;kalman&quot;}</td></tr>
+<tr class="separator:ad1951e750173d4b4cb5716bc91387632"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a8bafab3df8a2e68d91568923b96e57be"><td class="memItemLeft" align="right" valign="top">constexpr std::string_view&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespaceanonymous__namespace_02gstkalman_8cpp_03.xhtml#a8bafab3df8a2e68d91568923b96e57be">anonymous_namespace{gstkalman.cpp}::classification</a> {&quot;Filter/Effect/Video&quot;}</td></tr>
+<tr class="separator:a8bafab3df8a2e68d91568923b96e57be"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:abc2a45efd9c02b5b32e49030b97bfd03"><td class="memItemLeft" align="right" valign="top">constexpr std::string_view&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespaceanonymous__namespace_02gstkalman_8cpp_03.xhtml#abc2a45efd9c02b5b32e49030b97bfd03">anonymous_namespace{gstkalman.cpp}::long_name</a> {&quot;Kalman Filter&quot;}</td></tr>
+<tr class="separator:abc2a45efd9c02b5b32e49030b97bfd03"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a7c3272f41e32c4920e19477f93bd6f3e"><td class="memItemLeft" align="right" valign="top">constexpr std::string_view&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespaceanonymous__namespace_02gstkalman_8cpp_03.xhtml#a7c3272f41e32c4920e19477f93bd6f3e">anonymous_namespace{gstkalman.cpp}::description</a> {&quot;A video Kalman filter plugin.&quot;}</td></tr>
+<tr class="separator:a7c3272f41e32c4920e19477f93bd6f3e"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a576f016ece258ae5aa27dde32fcf454a"><td class="memItemLeft" align="right" valign="top">constexpr std::string_view&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespaceanonymous__namespace_02gstkalman_8cpp_03.xhtml#a576f016ece258ae5aa27dde32fcf454a">anonymous_namespace{gstkalman.cpp}::version</a> {&quot;0.1.0&quot;}</td></tr>
+<tr class="separator:a576f016ece258ae5aa27dde32fcf454a"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ab8f3e6489fdc2e7650de2898781127af"><td class="memItemLeft" align="right" valign="top">constexpr std::string_view&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespaceanonymous__namespace_02gstkalman_8cpp_03.xhtml#ab8f3e6489fdc2e7650de2898781127af">anonymous_namespace{gstkalman.cpp}::license</a> {&quot;Unlicense&quot;}</td></tr>
+<tr class="separator:ab8f3e6489fdc2e7650de2898781127af"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aa00e04b5be93a3426cc681d74843cf6e"><td class="memItemLeft" align="right" valign="top">constexpr std::string_view&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespaceanonymous__namespace_02gstkalman_8cpp_03.xhtml#aa00e04b5be93a3426cc681d74843cf6e">anonymous_namespace{gstkalman.cpp}::author</a></td></tr>
+<tr class="separator:aa00e04b5be93a3426cc681d74843cf6e"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a19a3044921a1d780ed647dfe4b03f881"><td class="memItemLeft" align="right" valign="top">constexpr std::string_view&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespaceanonymous__namespace_02gstkalman_8cpp_03.xhtml#a19a3044921a1d780ed647dfe4b03f881">anonymous_namespace{gstkalman.cpp}::origin</a></td></tr>
+<tr class="separator:a19a3044921a1d780ed647dfe4b03f881"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a8d7894d9aa3355d19e5c88cb983b04cf"><td class="memItemLeft" align="right" valign="top">constexpr std::string_view&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespaceanonymous__namespace_02gstkalman_8cpp_03.xhtml#a8d7894d9aa3355d19e5c88cb983b04cf">anonymous_namespace{gstkalman.cpp}::capabilities</a> {&quot;video/x-raw&quot;}</td></tr>
+<tr class="separator:a8d7894d9aa3355d19e5c88cb983b04cf"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:adb41e2c3592c62dae8d72925131dda63"><td class="memItemLeft" align="right" valign="top">name&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespaceanonymous__namespace_02gstkalman_8cpp_03.xhtml#adb41e2c3592c62dae8d72925131dda63">anonymous_namespace{gstkalman.cpp}::GST_RANK_NONE</a></td></tr>
+<tr class="separator:adb41e2c3592c62dae8d72925131dda63"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table>
+<a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
+<div class="textblock"><p >The GStreamer Kalman filter video plugin element implementation. </p>
+
+<p class="definition">Definition in file <a class="el" href="gstkalman_8cpp_source.xhtml">gstkalman.cpp</a>.</p>
+</div><h2 class="groupheader">Macro Definition Documentation</h2>
+<a id="aca8570fb706c81df371b7f9bc454ae03" name="aca8570fb706c81df371b7f9bc454ae03"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aca8570fb706c81df371b7f9bc454ae03">&#9670;&nbsp;</a></span>PACKAGE</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define PACKAGE&#160;&#160;&#160;name.data()</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition">Definition at line <a class="el" href="gstkalman_8cpp_source.xhtml#l00081">81</a> of file <a class="el" href="gstkalman_8cpp_source.xhtml">gstkalman.cpp</a>.</p>
+
+</div>
+</div>
 </div><!-- contents -->
 </div><!-- doc-content -->
 <!-- start footer part -->
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
     <li class="navelem"><a class="el" href="dir_b2f33c71d4aa5e7af42a1ca61ff5af1b.xhtml">source</a></li><li class="navelem"><a class="el" href="gstkalman_8cpp.xhtml">gstkalman.cpp</a></li>
-    <li class="footer">Generated on Fri Dec 23 2022 03:13:46 for GstKalman by <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.4 </li>
+    <li class="footer">Generated on Mon Dec 26 2022 21:27:19 for GstKalman by <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.4 </li>
   </ul>
 </div>
 </body>

@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['binary_0',['binary',['../_l_i_c_e_n_s_e_8txt.xhtml#ab8bbc27d8fe80567e920dc10c46af49e',1,'LICENSE.txt']]]
+  ['author_0',['author',['../namespaceanonymous__namespace_02gstkalman_8cpp_03.xhtml#aa00e04b5be93a3426cc681d74843cf6e',1,'anonymous_namespace{gstkalman.cpp}']]]
 ];
