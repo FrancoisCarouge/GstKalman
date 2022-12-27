@@ -36,33 +36,9 @@ OTHER DEALINGS IN THE SOFTWARE.
 
 For more information, please refer to <https://unlicense.org> ]]
 
-cmake_minimum_required(VERSION "3.24")
-
-project(
-  gstkalman
-  DESCRIPTION "GStreamer Kalman Filter Video Plugin in C++"
-  HOMEPAGE_URL "https://github.com/FrancoisCarouge/GstKalman"
-  LANGUAGES "CXX"
-  VERSION "0.1.0")
-
-set(CPACK_PACKAGE_CHECKSUM "SHA512")
-set(CPACK_PACKAGE_DESCRIPTION_FILE "${CMAKE_SOURCE_DIR}/README.md")
-set(CPACK_RESOURCE_FILE_LICENSE "${CMAKE_SOURCE_DIR}/LICENSE.txt")
-set(CMAKE_MODULE_PATH "${CMAKE_CURRENT_SOURCE_DIR}/cmake")
-
-include(CPack)
-include(CTest)
-include(FetchContent)
-include(FindPackageHandleStandardArgs)
-
-find_package(PkgConfig)
-
-find_package(fmt)
-find_package(GLib)
-find_package(GObject)
-find_package(GStreamer)
-find_package(kalman)
-find_package(ScopeGuard)
-
-add_subdirectory(sample)
-add_subdirectory(source)
+add_executable(gstkalman_sample_application_driver "application.cpp")
+target_link_libraries(
+  gstkalman_sample_application_driver
+  PRIVATE gstkalman gstkalman_glib gstkalman_gobject gstkalman_gstreamer
+          gstkalman_main)
+add_test(gstkalman_sample_application gstkalman_sample_application_driver)
