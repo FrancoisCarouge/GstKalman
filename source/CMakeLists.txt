@@ -65,6 +65,7 @@ else()
 endif()
 
 add_library(gstkalman SHARED "gstkalman.cpp")
+target_compile_definitions(gstkalman PRIVATE PACKAGE="kalman")
 target_compile_options(gstkalman PUBLIC ${OPTIONS})
 target_compile_features(gstkalman PUBLIC cxx_std_23)
 target_link_libraries(

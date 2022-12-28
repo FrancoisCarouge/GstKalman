@@ -46,13 +46,6 @@ For more information, please refer to <https://unlicense.org> */
 namespace fcarouge::sample {
 namespace {
 
-// P0052: A generic unique memory, resource scope manager. Allows to
-// automatically manage the resource lifetime and cleanup on scope exit. A
-// generalized Resource Acquisition Is Initialization (RAII) or Scope-Bound
-// Resource Management (SBRM) approach beyond what `std::unique_ptr` already
-// offers for memory pointers.
-using sr::unique_resource;
-
 //! @brief Signal callback to link raw video pad to sink.
 void link_pad_callback(GstElement *source, GstPad *pad, GstElement *sink);
 
@@ -73,12 +66,13 @@ void gst_pipeline_destroy(GstElement *pipeline);
   gst_init(nullptr, nullptr);
 
   // Create a top-level bin media pipeline to manage media streaming.
-  const unique_resource pipeline{gst_pipeline_new(nullptr),
-                                 gst_pipeline_destroy};
+  const sr::unique_resource pipeline{gst_pipeline_new(nullptr),
+                                     gst_pipeline_destroy};
   assert(pipeline.get() && "Failed to create the pipeline.");
 
   // Create the execution context main loop where computation takes place.
-  const unique_resource loop{g_main_loop_new(nullptr, 0), g_main_loop_unref};
+  const sr::unique_resource loop{g_main_loop_new(nullptr, 0),
+                                 g_main_loop_unref};
   assert(loop.get() && "Failed to create the event loop.");
 
   // Create a decoder bin element from URI to source the media.
@@ -94,7 +88,8 @@ void gst_pipeline_destroy(GstElement *pipeline);
   assert(converter && "Failed to create the video conversion element.");
 
   // Create the Kalman filter element under demonstration.
-  auto *const kalman{gst_element_factory_make("kalman", nullptr)};
+  auto *const kalman{
+      gst_element_factory_make_full("kalman", "p", 100., "r", 100., nullptr)};
   assert(kalman && "Failed to create the kalman filter element.");
 
   // Create an element to play the media out.
@@ -114,12 +109,12 @@ void gst_pipeline_destroy(GstElement *pipeline);
                           converter));
 
   // Obtain the bus of the pipeline to instrument it.
-  const unique_resource bus{gst_element_get_bus(pipeline.get()),
-                            gst_object_unref};
+  const sr::unique_resource bus{gst_element_get_bus(pipeline.get()),
+                                gst_object_unref};
   assert(bus.get() && "Failed to obtain the pipeline bus.");
 
   // Watch the bus with a callback stopping the execution on error or media end.
-  const unique_resource watch_id{
+  const sr::unique_resource watch_id{
       gst_bus_add_watch(bus.get(), quit_callback, loop.get()), g_source_remove};
   assert(watch_id.get() != 0 && "Failed to add the bus watch callback.");
 
@@ -139,8 +134,8 @@ void link_pad_callback(GstElement *source, GstPad *pad, GstElement *sink) {
   static_cast<void>(source);
 
   // Obtain the media capabilities of the pad.
-  const unique_resource pad_capabilities{gst_pad_get_current_caps(pad),
-                                         gst_caps_unref};
+  const sr::unique_resource pad_capabilities{gst_pad_get_current_caps(pad),
+                                             gst_caps_unref};
   assert(pad_capabilities.get() && "Failed to obtain the pad's capabilities.");
 
   // Obtain the capabilities data.
@@ -159,8 +154,8 @@ void link_pad_callback(GstElement *source, GstPad *pad, GstElement *sink) {
   }
 
   // Obtain the existing pad of the sink element.
-  const unique_resource sink_pad{gst_element_get_static_pad(sink, "sink"),
-                                 gst_object_unref};
+  const sr::unique_resource sink_pad{gst_element_get_static_pad(sink, "sink"),
+                                     gst_object_unref};
   assert(sink_pad.get() && "Failed to obtain the sink pad.");
 
   // Link the source and sink pads together.

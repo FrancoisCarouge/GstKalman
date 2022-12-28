@@ -52,12 +52,14 @@ jobs:
           -isystem /usr/lib/x86_64-linux-gnu/glib-2.0/include \
           -isystem /usr/local/include \
           -isystem /usr/local/include/fcarouge \
+          -DPACKAGE=\"kalman\" \
           -std=c++23 -g -fsanitize=thread \
           -L/usr/lib/x86_64-linux-gnu \
           -lglib-2.0 \
           -lgobject-2.0 \
           -lgstbase-1.0 \
           -lgstreamer-1.0 \
-          -lstdc++
+          -lstdc++ \
+          -ltbb
     - name: Test
       run: TSAN_OPTIONS=verbosity=2 ./a.out

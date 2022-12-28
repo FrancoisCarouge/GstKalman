@@ -12,6 +12,7 @@ jobs:
     steps:
     - name: Checkout
       uses: actions/checkout@v3.1.0
+    - name: Install
       # https://bugs.launchpad.net/ubuntu/+source/llvm-toolchain-14/+bug/1989124
       run: |
         sudo apt remove -y libunwind-14-dev

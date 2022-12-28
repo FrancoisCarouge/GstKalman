@@ -57,4 +57,5 @@ jobs:
           -isystem /usr/lib/x86_64-linux-gnu/glib-2.0/include \
           -isystem /usr/local/include \
           -isystem /usr/local/include/fcarouge \
+          -DPACKAGE=\"kalman\" \
           -Wall -Wextra -pedantic -std=c++2b -stdlib=libc++
