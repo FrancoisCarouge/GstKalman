@@ -63,5 +63,6 @@ find_package(GObject)
 find_package(GStreamer)
 find_package(kalman)
 find_package(ScopeGuard)
+find_package(TBB)
 
 add_subdirectory(source)

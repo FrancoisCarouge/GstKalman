@@ -18,7 +18,8 @@ jobs:
         sudo apt remove -y libunwind-14-dev
         sudo apt install \
           libgstreamer1.0-dev \
-          libgstreamer-plugins-base1.0-dev
+          libgstreamer-plugins-base1.0-dev \
+          libtbb2-dev
         ( cd /tmp
           git clone --depth 1 "https://github.com/FrancoisCarouge/kalman"
           cmake -S "kalman" -B "kalman/build"
