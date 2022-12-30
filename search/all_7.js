@@ -5,7 +5,8 @@ var searchData=
   ['gst_5fkalman_5fget_5ftype_2',['gst_kalman_get_type',['../namespaceanonymous__namespace_02gstkalman_8cpp_03.xhtml#ac4e908ffaf10d9fd4d5581c3a097fa8c',1,'anonymous_namespace{gstkalman.cpp}']]],
   ['gst_5fkalman_5finit_3',['gst_kalman_init',['../namespaceanonymous__namespace_02gstkalman_8cpp_03.xhtml#a878ebad5cd43ebe07593d3c3a5781061',1,'anonymous_namespace{gstkalman.cpp}']]],
   ['gst_5fkalman_5ftransform_5fin_5fplace_4',['gst_kalman_transform_in_place',['../namespaceanonymous__namespace_02gstkalman_8cpp_03.xhtml#ab2d338224aa3266bd923e4124b228344',1,'anonymous_namespace{gstkalman.cpp}']]],
-  ['gst_5fplugin_5fdefine_5',['GST_PLUGIN_DEFINE',['../namespaceanonymous__namespace_02gstkalman_8cpp_03.xhtml#a4cce0c4941a0f19778ca1d812ea608b0',1,'anonymous_namespace{gstkalman.cpp}']]],
-  ['gst_5frank_5fnone_6',['GST_RANK_NONE',['../namespaceanonymous__namespace_02gstkalman_8cpp_03.xhtml#adb41e2c3592c62dae8d72925131dda63',1,'anonymous_namespace{gstkalman.cpp}']]],
-  ['gstkalman_2ecpp_7',['gstkalman.cpp',['../gstkalman_8cpp.xhtml',1,'']]]
+  ['gst_5fpipeline_5fdestroy_5',['gst_pipeline_destroy',['../namespacefcarouge_1_1sample_1_1anonymous__namespace_02application_8cpp_03.xhtml#a5558ba9a57aa74f9a6029684b70b7cbb',1,'fcarouge::sample::anonymous_namespace{application.cpp}']]],
+  ['gst_5fplugin_5fdefine_6',['GST_PLUGIN_DEFINE',['../namespaceanonymous__namespace_02gstkalman_8cpp_03.xhtml#a4cce0c4941a0f19778ca1d812ea608b0',1,'anonymous_namespace{gstkalman.cpp}']]],
+  ['gst_5frank_5fnone_7',['GST_RANK_NONE',['../namespaceanonymous__namespace_02gstkalman_8cpp_03.xhtml#adb41e2c3592c62dae8d72925131dda63',1,'anonymous_namespace{gstkalman.cpp}']]],
+  ['gstkalman_2ecpp_8',['gstkalman.cpp',['../gstkalman_8cpp.xhtml',1,'']]]
 ];
