@@ -1,7 +1,12 @@
 Checks: '*,
         -altera-struct-pack-align,
         -altera-unroll-loops,
+        -cert-err58-cpp,
+        -cppcoreguidelines-pro-type-vararg,
+        -fuchsia-overloaded-operator,
+        -fuchsia-statically-constructed-objects,
         -fuchsia-trailing-return,
+        -hicpp-vararg,
         -llvmlibc-callee-namespace,
         -llvmlibc-implementation-in-namespace,
         -llvmlibc-restrict-system-libc-headers'
