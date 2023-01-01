@@ -87,6 +87,8 @@ $(document).ready(function(){initNavTree('namespaceanonymous__namespace_02gstkal
 <div class="header">
   <div class="summary">
 <a href="#nested-classes">Classes</a> &#124;
+<a href="#typedef-members">Typedefs</a> &#124;
+<a href="#enum-members">Enumerations</a> &#124;
 <a href="#func-members">Functions</a> &#124;
 <a href="#var-members">Variables</a>  </div>
   <div class="headertitle"><div class="title">anonymous_namespace{gstkalman.cpp} Namespace Reference</div></div>
@@ -99,6 +101,20 @@ Classes</h2></td></tr>
 <tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">The GStreamer Kalman filter video plugin element datastructure.  <a href="structanonymous__namespace_02gstkalman_8cpp_03_1_1___gst_kalman.xhtml#details">More...</a><br /></td></tr>
 <tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="typedef-members" name="typedef-members"></a>
+Typedefs</h2></td></tr>
+<tr class="memitem:ab51f675c361d36c316eca7e9f114250e"><td class="memItemLeft" align="right" valign="top">using&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespaceanonymous__namespace_02gstkalman_8cpp_03.xhtml#ab51f675c361d36c316eca7e9f114250e">kalman</a> = fcarouge::kalman&lt; float, float &gt;</td></tr>
+<tr class="separator:ab51f675c361d36c316eca7e9f114250e"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="enum-members" name="enum-members"></a>
+Enumerations</h2></td></tr>
+<tr class="memitem:a29bac156c28c7613bee4b9a434ce5aef"><td class="memItemLeft" align="right" valign="top">enum &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespaceanonymous__namespace_02gstkalman_8cpp_03.xhtml#a29bac156c28c7613bee4b9a434ce5aef">property</a> : guint { <a class="el" href="namespaceanonymous__namespace_02gstkalman_8cpp_03.xhtml#a29bac156c28c7613bee4b9a434ce5aefa98f96b1cd59fdba2ef926ba97bcf1a7a">_</a>
+, <a class="el" href="namespaceanonymous__namespace_02gstkalman_8cpp_03.xhtml#a29bac156c28c7613bee4b9a434ce5aefafd1688c9f310fa3e143846ff7e8fdd1b">p</a>
+, <a class="el" href="namespaceanonymous__namespace_02gstkalman_8cpp_03.xhtml#a29bac156c28c7613bee4b9a434ce5aefaa0b7a9e5147368162297e315efc1657f">r</a>
+ }</td></tr>
+<tr class="memdesc:a29bac156c28c7613bee4b9a434ce5aef"><td class="mdescLeft">&#160;</td><td class="mdescRight">The GStreamer Kalman filter element properties.  <a href="namespaceanonymous__namespace_02gstkalman_8cpp_03.xhtml#a29bac156c28c7613bee4b9a434ce5aef">More...</a><br /></td></tr>
+<tr class="separator:a29bac156c28c7613bee4b9a434ce5aef"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="func-members" name="func-members"></a>
 Functions</h2></td></tr>
 <tr class="memitem:a34f13e012528daaa546ef77e86378633"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespaceanonymous__namespace_02gstkalman_8cpp_03.xhtml#a34f13e012528daaa546ef77e86378633">G_DEFINE_TYPE</a> (GstKalman, gst_kalman, GST_TYPE_BASE_TRANSFORM)</td></tr>
@@ -106,10 +122,16 @@ Functions</h2></td></tr>
 <tr class="memitem:a282faaab85877b074d23a1057e361d20"><td class="memItemLeft" align="right" valign="top">auto&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespaceanonymous__namespace_02gstkalman_8cpp_03.xhtml#a282faaab85877b074d23a1057e361d20">initialize</a> (GstPlugin *plugin) -&gt; gboolean</td></tr>
 <tr class="memdesc:a282faaab85877b074d23a1057e361d20"><td class="mdescLeft">&#160;</td><td class="mdescRight">Registers the plugin element.  <a href="namespaceanonymous__namespace_02gstkalman_8cpp_03.xhtml#a282faaab85877b074d23a1057e361d20">More...</a><br /></td></tr>
 <tr class="separator:a282faaab85877b074d23a1057e361d20"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ab2a2b863bf64abd37deb951e488c7e60"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespaceanonymous__namespace_02gstkalman_8cpp_03.xhtml#ab2a2b863bf64abd37deb951e488c7e60">gst_kalman_set_property</a> (GObject *object, guint prop_id, const GValue *value, GParamSpec *pspec)</td></tr>
+<tr class="memdesc:ab2a2b863bf64abd37deb951e488c7e60"><td class="mdescLeft">&#160;</td><td class="mdescRight">Update the element instance data on property change.  <a href="namespaceanonymous__namespace_02gstkalman_8cpp_03.xhtml#ab2a2b863bf64abd37deb951e488c7e60">More...</a><br /></td></tr>
+<tr class="separator:ab2a2b863bf64abd37deb951e488c7e60"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a95c3fa1bc34fd840ccaf6161049bad5a"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespaceanonymous__namespace_02gstkalman_8cpp_03.xhtml#a95c3fa1bc34fd840ccaf6161049bad5a">gst_kalman_get_property</a> (GObject *object, guint prop_id, GValue *value, GParamSpec *pspec)</td></tr>
+<tr class="memdesc:a95c3fa1bc34fd840ccaf6161049bad5a"><td class="mdescLeft">&#160;</td><td class="mdescRight">Provides the element instance data on property request.  <a href="namespaceanonymous__namespace_02gstkalman_8cpp_03.xhtml#a95c3fa1bc34fd840ccaf6161049bad5a">More...</a><br /></td></tr>
+<tr class="separator:a95c3fa1bc34fd840ccaf6161049bad5a"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ab2d338224aa3266bd923e4124b228344"><td class="memItemLeft" align="right" valign="top">auto&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespaceanonymous__namespace_02gstkalman_8cpp_03.xhtml#ab2d338224aa3266bd923e4124b228344">gst_kalman_transform_in_place</a> (GstBaseTransform *element_base, GstBuffer *output) -&gt; GstFlowReturn</td></tr>
 <tr class="memdesc:ab2d338224aa3266bd923e4124b228344"><td class="mdescLeft">&#160;</td><td class="mdescRight">Processes the data buffer in-place.  <a href="namespaceanonymous__namespace_02gstkalman_8cpp_03.xhtml#ab2d338224aa3266bd923e4124b228344">More...</a><br /></td></tr>
 <tr class="separator:ab2d338224aa3266bd923e4124b228344"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a4cce0c4941a0f19778ca1d812ea608b0"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespaceanonymous__namespace_02gstkalman_8cpp_03.xhtml#a4cce0c4941a0f19778ca1d812ea608b0">GST_PLUGIN_DEFINE</a> (GST_VERSION_MAJOR, GST_VERSION_MINOR, kalman, description.data(), <a class="el" href="namespaceanonymous__namespace_02gstkalman_8cpp_03.xhtml#a282faaab85877b074d23a1057e361d20">initialize</a>, version.data(), license.data(), name.data(), origin.data()) GST_ELEMENT_REGISTER_DEFINE(kalman</td></tr>
+<tr class="memitem:a4cce0c4941a0f19778ca1d812ea608b0"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespaceanonymous__namespace_02gstkalman_8cpp_03.xhtml#a4cce0c4941a0f19778ca1d812ea608b0">GST_PLUGIN_DEFINE</a> (GST_VERSION_MAJOR, GST_VERSION_MINOR, <a class="el" href="namespaceanonymous__namespace_02gstkalman_8cpp_03.xhtml#ab51f675c361d36c316eca7e9f114250e">kalman</a>, description.data(), <a class="el" href="namespaceanonymous__namespace_02gstkalman_8cpp_03.xhtml#a282faaab85877b074d23a1057e361d20">initialize</a>, version.data(), license.data(), name.data(), origin.data()) GST_ELEMENT_REGISTER_DEFINE(<a class="el" href="namespaceanonymous__namespace_02gstkalman_8cpp_03.xhtml#ab51f675c361d36c316eca7e9f114250e">kalman</a></td></tr>
 <tr class="separator:a4cce0c4941a0f19778ca1d812ea608b0"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ae3f768d24a8ae50905560e110bfb4867"><td class="memItemLeft" align="right" valign="top"><a class="el" href="namespaceanonymous__namespace_02gstkalman_8cpp_03.xhtml#ad1951e750173d4b4cb5716bc91387632">name</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespaceanonymous__namespace_02gstkalman_8cpp_03.xhtml#ae3f768d24a8ae50905560e110bfb4867">data</a> ()</td></tr>
 <tr class="separator:ae3f768d24a8ae50905560e110bfb4867"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -145,6 +167,52 @@ Variables</h2></td></tr>
 <tr class="memitem:adb41e2c3592c62dae8d72925131dda63"><td class="memItemLeft" align="right" valign="top"><a class="el" href="namespaceanonymous__namespace_02gstkalman_8cpp_03.xhtml#ad1951e750173d4b4cb5716bc91387632">name</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespaceanonymous__namespace_02gstkalman_8cpp_03.xhtml#adb41e2c3592c62dae8d72925131dda63">GST_RANK_NONE</a></td></tr>
 <tr class="separator:adb41e2c3592c62dae8d72925131dda63"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
+<h2 class="groupheader">Typedef Documentation</h2>
+<a id="ab51f675c361d36c316eca7e9f114250e" name="ab51f675c361d36c316eca7e9f114250e"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ab51f675c361d36c316eca7e9f114250e">&#9670;&nbsp;</a></span>kalman</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">using anonymous_namespace{gstkalman.cpp}::kalman = typedef fcarouge::kalman&lt;float, float&gt;</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition">Definition at line <a class="el" href="gstkalman_8cpp_source.xhtml#l00058">58</a> of file <a class="el" href="gstkalman_8cpp_source.xhtml">gstkalman.cpp</a>.</p>
+
+</div>
+</div>
+<h2 class="groupheader">Enumeration Type Documentation</h2>
+<a id="a29bac156c28c7613bee4b9a434ce5aef" name="a29bac156c28c7613bee4b9a434ce5aef"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a29bac156c28c7613bee4b9a434ce5aef">&#9670;&nbsp;</a></span>property</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">enum anonymous_namespace{gstkalman.cpp}::property : guint</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>The GStreamer Kalman filter element properties. </p>
+<dl class="todo"><dt><b><a class="el" href="todo.xhtml#_todo000001">Todo:</a></b></dt><dd>Understand why GLib must have a zero-th property. </dd></dl>
+<table class="fieldtable">
+<tr><th colspan="2">Enumerator</th></tr><tr><td class="fieldname"><a id="a29bac156c28c7613bee4b9a434ce5aefa98f96b1cd59fdba2ef926ba97bcf1a7a" name="a29bac156c28c7613bee4b9a434ce5aefa98f96b1cd59fdba2ef926ba97bcf1a7a"></a>_&#160;</td><td class="fielddoc"></td></tr>
+<tr><td class="fieldname"><a id="a29bac156c28c7613bee4b9a434ce5aefafd1688c9f310fa3e143846ff7e8fdd1b" name="a29bac156c28c7613bee4b9a434ce5aefafd1688c9f310fa3e143846ff7e8fdd1b"></a>p&#160;</td><td class="fielddoc"></td></tr>
+<tr><td class="fieldname"><a id="a29bac156c28c7613bee4b9a434ce5aefaa0b7a9e5147368162297e315efc1657f" name="a29bac156c28c7613bee4b9a434ce5aefaa0b7a9e5147368162297e315efc1657f"></a>r&#160;</td><td class="fielddoc"></td></tr>
+</table>
+
+<p class="definition">Definition at line <a class="el" href="gstkalman_8cpp_source.xhtml#l00081">81</a> of file <a class="el" href="gstkalman_8cpp_source.xhtml">gstkalman.cpp</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">   81</span>: guint { <a class="code hl_enumvalue" href="namespaceanonymous__namespace_02gstkalman_8cpp_03.xhtml#a29bac156c28c7613bee4b9a434ce5aefa98f96b1cd59fdba2ef926ba97bcf1a7a">_</a>, <a class="code hl_enumvalue" href="namespaceanonymous__namespace_02gstkalman_8cpp_03.xhtml#a29bac156c28c7613bee4b9a434ce5aefafd1688c9f310fa3e143846ff7e8fdd1b">p</a>, <a class="code hl_enumvalue" href="namespaceanonymous__namespace_02gstkalman_8cpp_03.xhtml#a29bac156c28c7613bee4b9a434ce5aefaa0b7a9e5147368162297e315efc1657f">r</a> };</div>
+<div class="ttc" id="anamespaceanonymous__namespace_02gstkalman_8cpp_03_xhtml_a29bac156c28c7613bee4b9a434ce5aefa98f96b1cd59fdba2ef926ba97bcf1a7a"><div class="ttname"><a href="namespaceanonymous__namespace_02gstkalman_8cpp_03.xhtml#a29bac156c28c7613bee4b9a434ce5aefa98f96b1cd59fdba2ef926ba97bcf1a7a">anonymous_namespace{gstkalman.cpp}::_</a></div><div class="ttdeci">@ _</div><div class="ttdef"><b>Definition:</b> <a href="gstkalman_8cpp_source.xhtml#l00081">gstkalman.cpp:81</a></div></div>
+<div class="ttc" id="anamespaceanonymous__namespace_02gstkalman_8cpp_03_xhtml_a29bac156c28c7613bee4b9a434ce5aefaa0b7a9e5147368162297e315efc1657f"><div class="ttname"><a href="namespaceanonymous__namespace_02gstkalman_8cpp_03.xhtml#a29bac156c28c7613bee4b9a434ce5aefaa0b7a9e5147368162297e315efc1657f">anonymous_namespace{gstkalman.cpp}::r</a></div><div class="ttdeci">@ r</div><div class="ttdef"><b>Definition:</b> <a href="gstkalman_8cpp_source.xhtml#l00081">gstkalman.cpp:81</a></div></div>
+<div class="ttc" id="anamespaceanonymous__namespace_02gstkalman_8cpp_03_xhtml_a29bac156c28c7613bee4b9a434ce5aefafd1688c9f310fa3e143846ff7e8fdd1b"><div class="ttname"><a href="namespaceanonymous__namespace_02gstkalman_8cpp_03.xhtml#a29bac156c28c7613bee4b9a434ce5aefafd1688c9f310fa3e143846ff7e8fdd1b">anonymous_namespace{gstkalman.cpp}::p</a></div><div class="ttdeci">@ p</div><div class="ttdef"><b>Definition:</b> <a href="gstkalman_8cpp_source.xhtml#l00081">gstkalman.cpp:81</a></div></div>
+</div><!-- fragment -->
+</div>
+</div>
 <h2 class="groupheader">Function Documentation</h2>
 <a id="ae3f768d24a8ae50905560e110bfb4867" name="ae3f768d24a8ae50905560e110bfb4867"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#ae3f768d24a8ae50905560e110bfb4867">&#9670;&nbsp;</a></span>data()</h2>
@@ -214,44 +282,124 @@ Variables</h2></td></tr>
 </div><div class="memdoc">
 
 <p>Defines the element details. </p>
+<p >Sets up the element metadata, static sink and source, in-place compute, and properties. </p>
 
-<p class="definition">Definition at line <a class="el" href="gstkalman_8cpp_source.xhtml#l00094">94</a> of file <a class="el" href="gstkalman_8cpp_source.xhtml">gstkalman.cpp</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">   94</span>                                                  {</div>
-<div class="line"><span class="lineno">   95</span>  <span class="keyword">auto</span> *gstelement_class{GST_ELEMENT_CLASS(klass)};</div>
-<div class="line"><span class="lineno">   96</span> </div>
-<div class="line"><span class="lineno">   97</span>  gst_element_class_set_details_simple(gstelement_class, <a class="code hl_variable" href="namespaceanonymous__namespace_02gstkalman_8cpp_03.xhtml#abc2a45efd9c02b5b32e49030b97bfd03">long_name</a>.data(),</div>
-<div class="line"><span class="lineno">   98</span>                                       <a class="code hl_variable" href="namespaceanonymous__namespace_02gstkalman_8cpp_03.xhtml#a8bafab3df8a2e68d91568923b96e57be">classification</a>.data(),</div>
-<div class="line"><span class="lineno">   99</span>                                       <a class="code hl_variable" href="namespaceanonymous__namespace_02gstkalman_8cpp_03.xhtml#a7c3272f41e32c4920e19477f93bd6f3e">description</a>.data(), <a class="code hl_variable" href="namespaceanonymous__namespace_02gstkalman_8cpp_03.xhtml#aa00e04b5be93a3426cc681d74843cf6e">author</a>.data());</div>
-<div class="line"><span class="lineno">  100</span> </div>
-<div class="line"><span class="lineno">  101</span>  GstStaticPadTemplate sink_template{<span class="stringliteral">&quot;sink&quot;</span>, GstPadDirection::GST_PAD_SINK,</div>
-<div class="line"><span class="lineno">  102</span>                                     GstPadPresence::GST_PAD_ALWAYS,</div>
-<div class="line"><span class="lineno">  103</span>                                     GST_STATIC_CAPS(<a class="code hl_variable" href="namespaceanonymous__namespace_02gstkalman_8cpp_03.xhtml#a8d7894d9aa3355d19e5c88cb983b04cf">capabilities</a>.data())};</div>
-<div class="line"><span class="lineno">  104</span>  gst_element_class_add_pad_template(</div>
-<div class="line"><span class="lineno">  105</span>      gstelement_class, gst_static_pad_template_get(&amp;sink_template));</div>
-<div class="line"><span class="lineno">  106</span> </div>
-<div class="line"><span class="lineno">  107</span>  GstStaticPadTemplate source_template{<span class="stringliteral">&quot;src&quot;</span>, GstPadDirection::GST_PAD_SRC,</div>
-<div class="line"><span class="lineno">  108</span>                                       GstPadPresence::GST_PAD_ALWAYS,</div>
-<div class="line"><span class="lineno">  109</span>                                       GST_STATIC_CAPS(<a class="code hl_variable" href="namespaceanonymous__namespace_02gstkalman_8cpp_03.xhtml#a8d7894d9aa3355d19e5c88cb983b04cf">capabilities</a>.data())};</div>
-<div class="line"><span class="lineno">  110</span>  gst_element_class_add_pad_template(</div>
-<div class="line"><span class="lineno">  111</span>      gstelement_class, gst_static_pad_template_get(&amp;source_template));</div>
-<div class="line"><span class="lineno">  112</span> </div>
-<div class="line"><span class="lineno">  113</span>  GST_BASE_TRANSFORM_CLASS(klass)-&gt;transform_ip =</div>
-<div class="line"><span class="lineno">  114</span>      GST_DEBUG_FUNCPTR(<a class="code hl_function" href="namespaceanonymous__namespace_02gstkalman_8cpp_03.xhtml#ab2d338224aa3266bd923e4124b228344">gst_kalman_transform_in_place</a>);</div>
-<div class="line"><span class="lineno">  115</span>}</div>
-<div class="ttc" id="anamespaceanonymous__namespace_02gstkalman_8cpp_03_xhtml_a7c3272f41e32c4920e19477f93bd6f3e"><div class="ttname"><a href="namespaceanonymous__namespace_02gstkalman_8cpp_03.xhtml#a7c3272f41e32c4920e19477f93bd6f3e">anonymous_namespace{gstkalman.cpp}::description</a></div><div class="ttdeci">constexpr std::string_view description</div><div class="ttdef"><b>Definition:</b> <a href="gstkalman_8cpp_source.xhtml#l00053">gstkalman.cpp:53</a></div></div>
-<div class="ttc" id="anamespaceanonymous__namespace_02gstkalman_8cpp_03_xhtml_a8bafab3df8a2e68d91568923b96e57be"><div class="ttname"><a href="namespaceanonymous__namespace_02gstkalman_8cpp_03.xhtml#a8bafab3df8a2e68d91568923b96e57be">anonymous_namespace{gstkalman.cpp}::classification</a></div><div class="ttdeci">constexpr std::string_view classification</div><div class="ttdef"><b>Definition:</b> <a href="gstkalman_8cpp_source.xhtml#l00051">gstkalman.cpp:51</a></div></div>
-<div class="ttc" id="anamespaceanonymous__namespace_02gstkalman_8cpp_03_xhtml_a8d7894d9aa3355d19e5c88cb983b04cf"><div class="ttname"><a href="namespaceanonymous__namespace_02gstkalman_8cpp_03.xhtml#a8d7894d9aa3355d19e5c88cb983b04cf">anonymous_namespace{gstkalman.cpp}::capabilities</a></div><div class="ttdeci">constexpr std::string_view capabilities</div><div class="ttdef"><b>Definition:</b> <a href="gstkalman_8cpp_source.xhtml#l00060">gstkalman.cpp:60</a></div></div>
-<div class="ttc" id="anamespaceanonymous__namespace_02gstkalman_8cpp_03_xhtml_aa00e04b5be93a3426cc681d74843cf6e"><div class="ttname"><a href="namespaceanonymous__namespace_02gstkalman_8cpp_03.xhtml#aa00e04b5be93a3426cc681d74843cf6e">anonymous_namespace{gstkalman.cpp}::author</a></div><div class="ttdeci">constexpr std::string_view author</div><div class="ttdef"><b>Definition:</b> <a href="gstkalman_8cpp_source.xhtml#l00056">gstkalman.cpp:56</a></div></div>
-<div class="ttc" id="anamespaceanonymous__namespace_02gstkalman_8cpp_03_xhtml_ab2d338224aa3266bd923e4124b228344"><div class="ttname"><a href="namespaceanonymous__namespace_02gstkalman_8cpp_03.xhtml#ab2d338224aa3266bd923e4124b228344">anonymous_namespace{gstkalman.cpp}::gst_kalman_transform_in_place</a></div><div class="ttdeci">auto gst_kalman_transform_in_place(GstBaseTransform *base, GstBuffer *output) -&gt; GstFlowReturn</div><div class="ttdoc">Processes the data buffer in-place.</div><div class="ttdef"><b>Definition:</b> <a href="gstkalman_8cpp_source.xhtml#l00121">gstkalman.cpp:121</a></div></div>
-<div class="ttc" id="anamespaceanonymous__namespace_02gstkalman_8cpp_03_xhtml_abc2a45efd9c02b5b32e49030b97bfd03"><div class="ttname"><a href="namespaceanonymous__namespace_02gstkalman_8cpp_03.xhtml#abc2a45efd9c02b5b32e49030b97bfd03">anonymous_namespace{gstkalman.cpp}::long_name</a></div><div class="ttdeci">constexpr std::string_view long_name</div><div class="ttdef"><b>Definition:</b> <a href="gstkalman_8cpp_source.xhtml#l00052">gstkalman.cpp:52</a></div></div>
+<p class="definition">Definition at line <a class="el" href="gstkalman_8cpp_source.xhtml#l00124">124</a> of file <a class="el" href="gstkalman_8cpp_source.xhtml">gstkalman.cpp</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">  124</span>                                                  {</div>
+<div class="line"><span class="lineno">  125</span>  <span class="keyword">auto</span> *object_klass{G_OBJECT_CLASS(klass)};</div>
+<div class="line"><span class="lineno">  126</span>  object_klass-&gt;set_property = <a class="code hl_function" href="namespaceanonymous__namespace_02gstkalman_8cpp_03.xhtml#ab2a2b863bf64abd37deb951e488c7e60">gst_kalman_set_property</a>;</div>
+<div class="line"><span class="lineno">  127</span>  object_klass-&gt;get_property = <a class="code hl_function" href="namespaceanonymous__namespace_02gstkalman_8cpp_03.xhtml#a95c3fa1bc34fd840ccaf6161049bad5a">gst_kalman_get_property</a>;</div>
+<div class="line"><span class="lineno">  128</span> </div>
+<div class="line"><span class="lineno">  129</span>  <span class="keyword">constexpr</span> GParamFlags described_readwrite{</div>
+<div class="line"><span class="lineno">  130</span>      <span class="keyword">static_cast&lt;</span>GParamFlags<span class="keyword">&gt;</span>(<span class="keyword">static_cast&lt;</span><span class="keywordtype">unsigned</span><span class="keyword">&gt;</span>(G_PARAM_READWRITE) |</div>
+<div class="line"><span class="lineno">  131</span>                               <span class="keyword">static_cast&lt;</span><span class="keywordtype">unsigned</span><span class="keyword">&gt;</span>(G_PARAM_STATIC_STRINGS))};</div>
+<div class="line"><span class="lineno">  132</span>  <span class="keyword">constexpr</span> <span class="keyword">auto</span> max_float{std::numeric_limits&lt;float&gt;::max()};</div>
+<div class="line"><span class="lineno">  133</span>  g_object_class_install_property(</div>
+<div class="line"><span class="lineno">  134</span>      object_klass, <a class="code hl_enumvalue" href="namespaceanonymous__namespace_02gstkalman_8cpp_03.xhtml#a29bac156c28c7613bee4b9a434ce5aefafd1688c9f310fa3e143846ff7e8fdd1b">property::p</a>,</div>
+<div class="line"><span class="lineno">  135</span>      g_param_spec_float(<span class="stringliteral">&quot;p&quot;</span>, <span class="stringliteral">&quot;P&quot;</span>, <span class="stringliteral">&quot;Initialize estimate uncertainty.&quot;</span>, 0.,</div>
+<div class="line"><span class="lineno">  136</span>                         max_float, 1., described_readwrite));</div>
+<div class="line"><span class="lineno">  137</span>  g_object_class_install_property(</div>
+<div class="line"><span class="lineno">  138</span>      object_klass, <a class="code hl_enumvalue" href="namespaceanonymous__namespace_02gstkalman_8cpp_03.xhtml#a29bac156c28c7613bee4b9a434ce5aefaa0b7a9e5147368162297e315efc1657f">property::r</a>,</div>
+<div class="line"><span class="lineno">  139</span>      g_param_spec_float(<span class="stringliteral">&quot;r&quot;</span>, <span class="stringliteral">&quot;R&quot;</span>, <span class="stringliteral">&quot;Initialize output uncertainty.&quot;</span>, 0.,</div>
+<div class="line"><span class="lineno">  140</span>                         max_float, 0., described_readwrite));</div>
+<div class="line"><span class="lineno">  141</span> </div>
+<div class="line"><span class="lineno">  142</span>  <span class="keyword">auto</span> *gstelement_klass{GST_ELEMENT_CLASS(klass)};</div>
+<div class="line"><span class="lineno">  143</span>  gst_element_class_set_static_metadata(gstelement_klass, <a class="code hl_variable" href="namespaceanonymous__namespace_02gstkalman_8cpp_03.xhtml#abc2a45efd9c02b5b32e49030b97bfd03">long_name</a>.data(),</div>
+<div class="line"><span class="lineno">  144</span>                                        <a class="code hl_variable" href="namespaceanonymous__namespace_02gstkalman_8cpp_03.xhtml#a8bafab3df8a2e68d91568923b96e57be">classification</a>.data(),</div>
+<div class="line"><span class="lineno">  145</span>                                        <a class="code hl_variable" href="namespaceanonymous__namespace_02gstkalman_8cpp_03.xhtml#a7c3272f41e32c4920e19477f93bd6f3e">description</a>.data(), <a class="code hl_variable" href="namespaceanonymous__namespace_02gstkalman_8cpp_03.xhtml#aa00e04b5be93a3426cc681d74843cf6e">author</a>.data());</div>
+<div class="line"><span class="lineno">  146</span> </div>
+<div class="line"><span class="lineno">  147</span>  GstStaticPadTemplate sink_template{<span class="stringliteral">&quot;sink&quot;</span>, GstPadDirection::GST_PAD_SINK,</div>
+<div class="line"><span class="lineno">  148</span>                                     GstPadPresence::GST_PAD_ALWAYS,</div>
+<div class="line"><span class="lineno">  149</span>                                     GST_STATIC_CAPS(<a class="code hl_variable" href="namespaceanonymous__namespace_02gstkalman_8cpp_03.xhtml#a8d7894d9aa3355d19e5c88cb983b04cf">capabilities</a>.data())};</div>
+<div class="line"><span class="lineno">  150</span>  gst_element_class_add_pad_template(</div>
+<div class="line"><span class="lineno">  151</span>      gstelement_klass, gst_static_pad_template_get(&amp;sink_template));</div>
+<div class="line"><span class="lineno">  152</span> </div>
+<div class="line"><span class="lineno">  153</span>  GstStaticPadTemplate source_template{<span class="stringliteral">&quot;src&quot;</span>, GstPadDirection::GST_PAD_SRC,</div>
+<div class="line"><span class="lineno">  154</span>                                       GstPadPresence::GST_PAD_ALWAYS,</div>
+<div class="line"><span class="lineno">  155</span>                                       GST_STATIC_CAPS(<a class="code hl_variable" href="namespaceanonymous__namespace_02gstkalman_8cpp_03.xhtml#a8d7894d9aa3355d19e5c88cb983b04cf">capabilities</a>.data())};</div>
+<div class="line"><span class="lineno">  156</span>  gst_element_class_add_pad_template(</div>
+<div class="line"><span class="lineno">  157</span>      gstelement_klass, gst_static_pad_template_get(&amp;source_template));</div>
+<div class="line"><span class="lineno">  158</span> </div>
+<div class="line"><span class="lineno">  159</span>  GST_BASE_TRANSFORM_CLASS(klass)-&gt;transform_ip =</div>
+<div class="line"><span class="lineno">  160</span>      GST_DEBUG_FUNCPTR(<a class="code hl_function" href="namespaceanonymous__namespace_02gstkalman_8cpp_03.xhtml#ab2d338224aa3266bd923e4124b228344">gst_kalman_transform_in_place</a>);</div>
+<div class="line"><span class="lineno">  161</span>}</div>
+<div class="ttc" id="anamespaceanonymous__namespace_02gstkalman_8cpp_03_xhtml_a7c3272f41e32c4920e19477f93bd6f3e"><div class="ttname"><a href="namespaceanonymous__namespace_02gstkalman_8cpp_03.xhtml#a7c3272f41e32c4920e19477f93bd6f3e">anonymous_namespace{gstkalman.cpp}::description</a></div><div class="ttdeci">constexpr std::string_view description</div><div class="ttdef"><b>Definition:</b> <a href="gstkalman_8cpp_source.xhtml#l00086">gstkalman.cpp:86</a></div></div>
+<div class="ttc" id="anamespaceanonymous__namespace_02gstkalman_8cpp_03_xhtml_a8bafab3df8a2e68d91568923b96e57be"><div class="ttname"><a href="namespaceanonymous__namespace_02gstkalman_8cpp_03.xhtml#a8bafab3df8a2e68d91568923b96e57be">anonymous_namespace{gstkalman.cpp}::classification</a></div><div class="ttdeci">constexpr std::string_view classification</div><div class="ttdef"><b>Definition:</b> <a href="gstkalman_8cpp_source.xhtml#l00084">gstkalman.cpp:84</a></div></div>
+<div class="ttc" id="anamespaceanonymous__namespace_02gstkalman_8cpp_03_xhtml_a8d7894d9aa3355d19e5c88cb983b04cf"><div class="ttname"><a href="namespaceanonymous__namespace_02gstkalman_8cpp_03.xhtml#a8d7894d9aa3355d19e5c88cb983b04cf">anonymous_namespace{gstkalman.cpp}::capabilities</a></div><div class="ttdeci">constexpr std::string_view capabilities</div><div class="ttdef"><b>Definition:</b> <a href="gstkalman_8cpp_source.xhtml#l00093">gstkalman.cpp:93</a></div></div>
+<div class="ttc" id="anamespaceanonymous__namespace_02gstkalman_8cpp_03_xhtml_a95c3fa1bc34fd840ccaf6161049bad5a"><div class="ttname"><a href="namespaceanonymous__namespace_02gstkalman_8cpp_03.xhtml#a95c3fa1bc34fd840ccaf6161049bad5a">anonymous_namespace{gstkalman.cpp}::gst_kalman_get_property</a></div><div class="ttdeci">void gst_kalman_get_property(GObject *object, guint prop_id, GValue *value, GParamSpec *pspec)</div><div class="ttdoc">Provides the element instance data on property request.</div><div class="ttdef"><b>Definition:</b> <a href="gstkalman_8cpp_source.xhtml#l00184">gstkalman.cpp:184</a></div></div>
+<div class="ttc" id="anamespaceanonymous__namespace_02gstkalman_8cpp_03_xhtml_aa00e04b5be93a3426cc681d74843cf6e"><div class="ttname"><a href="namespaceanonymous__namespace_02gstkalman_8cpp_03.xhtml#aa00e04b5be93a3426cc681d74843cf6e">anonymous_namespace{gstkalman.cpp}::author</a></div><div class="ttdeci">constexpr std::string_view author</div><div class="ttdef"><b>Definition:</b> <a href="gstkalman_8cpp_source.xhtml#l00089">gstkalman.cpp:89</a></div></div>
+<div class="ttc" id="anamespaceanonymous__namespace_02gstkalman_8cpp_03_xhtml_ab2a2b863bf64abd37deb951e488c7e60"><div class="ttname"><a href="namespaceanonymous__namespace_02gstkalman_8cpp_03.xhtml#ab2a2b863bf64abd37deb951e488c7e60">anonymous_namespace{gstkalman.cpp}::gst_kalman_set_property</a></div><div class="ttdeci">void gst_kalman_set_property(GObject *object, guint prop_id, const GValue *value, GParamSpec *pspec)</div><div class="ttdoc">Update the element instance data on property change.</div><div class="ttdef"><b>Definition:</b> <a href="gstkalman_8cpp_source.xhtml#l00164">gstkalman.cpp:164</a></div></div>
+<div class="ttc" id="anamespaceanonymous__namespace_02gstkalman_8cpp_03_xhtml_ab2d338224aa3266bd923e4124b228344"><div class="ttname"><a href="namespaceanonymous__namespace_02gstkalman_8cpp_03.xhtml#ab2d338224aa3266bd923e4124b228344">anonymous_namespace{gstkalman.cpp}::gst_kalman_transform_in_place</a></div><div class="ttdeci">auto gst_kalman_transform_in_place(GstBaseTransform *base, GstBuffer *output) -&gt; GstFlowReturn</div><div class="ttdoc">Processes the data buffer in-place.</div><div class="ttdef"><b>Definition:</b> <a href="gstkalman_8cpp_source.xhtml#l00201">gstkalman.cpp:201</a></div></div>
+<div class="ttc" id="anamespaceanonymous__namespace_02gstkalman_8cpp_03_xhtml_abc2a45efd9c02b5b32e49030b97bfd03"><div class="ttname"><a href="namespaceanonymous__namespace_02gstkalman_8cpp_03.xhtml#abc2a45efd9c02b5b32e49030b97bfd03">anonymous_namespace{gstkalman.cpp}::long_name</a></div><div class="ttdeci">constexpr std::string_view long_name</div><div class="ttdef"><b>Definition:</b> <a href="gstkalman_8cpp_source.xhtml#l00085">gstkalman.cpp:85</a></div></div>
 </div><!-- fragment -->
-<p class="reference">References <a class="el" href="gstkalman_8cpp_source.xhtml#l00056">author</a>, <a class="el" href="gstkalman_8cpp_source.xhtml#l00060">capabilities</a>, <a class="el" href="gstkalman_8cpp_source.xhtml#l00051">classification</a>, <a class="el" href="gstkalman_8cpp_source.xhtml#l00053">description</a>, <a class="el" href="gstkalman_8cpp_source.xhtml#l00121">gst_kalman_transform_in_place()</a>, and <a class="el" href="gstkalman_8cpp_source.xhtml#l00052">long_name</a>.</p>
+<p class="reference">References <a class="el" href="gstkalman_8cpp_source.xhtml#l00089">author</a>, <a class="el" href="gstkalman_8cpp_source.xhtml#l00093">capabilities</a>, <a class="el" href="gstkalman_8cpp_source.xhtml#l00084">classification</a>, <a class="el" href="gstkalman_8cpp_source.xhtml#l00086">description</a>, <a class="el" href="gstkalman_8cpp_source.xhtml#l00184">gst_kalman_get_property()</a>, <a class="el" href="gstkalman_8cpp_source.xhtml#l00164">gst_kalman_set_property()</a>, <a class="el" href="gstkalman_8cpp_source.xhtml#l00201">gst_kalman_transform_in_place()</a>, <a class="el" href="gstkalman_8cpp_source.xhtml#l00085">long_name</a>, <a class="el" href="gstkalman_8cpp_source.xhtml#l00081">p</a>, and <a class="el" href="gstkalman_8cpp_source.xhtml#l00081">r</a>.</p>
 <div id="dynsection-0" onclick="return toggleVisibility(this)" class="dynheader closed" style="cursor:pointer;">
   <img id="dynsection-0-trigger" src="closed.png" alt="+"/> Here is the call graph for this function:</div>
 <div id="dynsection-0-summary" class="dynsummary" style="display:block;">
 </div>
 <div id="dynsection-0-content" class="dyncontent" style="display:none;">
-<div class="center"><iframe scrolling="no" frameborder="0" src="namespaceanonymous__namespace_02gstkalman_8cpp_03_a46ad1d4a4b1958355e4fd6ed7c8e2ef8_cgraph.svg" width="410" height="67"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe>
+<div class="center"><iframe scrolling="no" frameborder="0" src="namespaceanonymous__namespace_02gstkalman_8cpp_03_a46ad1d4a4b1958355e4fd6ed7c8e2ef8_cgraph.svg" width="410" height="227"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe>
+</div>
+</div>
+
+</div>
+</div>
+<a id="a95c3fa1bc34fd840ccaf6161049bad5a" name="a95c3fa1bc34fd840ccaf6161049bad5a"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a95c3fa1bc34fd840ccaf6161049bad5a">&#9670;&nbsp;</a></span>gst_kalman_get_property()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void anonymous_namespace gstkalman anonymous_namespace{gstkalman.cpp}::cpp::gst_kalman_get_property </td>
+          <td>(</td>
+          <td class="paramtype">GObject *&#160;</td>
+          <td class="paramname"><em>object</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">guint&#160;</td>
+          <td class="paramname"><em>prop_id</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">GValue *&#160;</td>
+          <td class="paramname"><em>value</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">GParamSpec *&#160;</td>
+          <td class="paramname"><em>pspec</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Provides the element instance data on property request. </p>
+<dl class="todo"><dt><b><a class="el" href="todo.xhtml#_todo000002">Todo:</a></b></dt><dd>Implement and test. </dd></dl>
+
+<p class="definition">Definition at line <a class="el" href="gstkalman_8cpp_source.xhtml#l00184">184</a> of file <a class="el" href="gstkalman_8cpp_source.xhtml">gstkalman.cpp</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">  185</span>                                                {</div>
+<div class="line"><span class="lineno">  186</span>  <span class="keyword">static_cast&lt;</span><span class="keywordtype">void</span><span class="keyword">&gt;</span>(object);</div>
+<div class="line"><span class="lineno">  187</span>  <span class="keyword">static_cast&lt;</span><span class="keywordtype">void</span><span class="keyword">&gt;</span>(prop_id);</div>
+<div class="line"><span class="lineno">  188</span>  <span class="keyword">static_cast&lt;</span><span class="keywordtype">void</span><span class="keyword">&gt;</span>(value);</div>
+<div class="line"><span class="lineno">  189</span>  <span class="keyword">static_cast&lt;</span><span class="keywordtype">void</span><span class="keyword">&gt;</span>(pspec);</div>
+<div class="line"><span class="lineno">  190</span>}</div>
+</div><!-- fragment -->
+<p class="reference">Referenced by <a class="el" href="gstkalman_8cpp_source.xhtml#l00124">gst_kalman_class_init()</a>.</p>
+<div id="dynsection-1" onclick="return toggleVisibility(this)" class="dynheader closed" style="cursor:pointer;">
+  <img id="dynsection-1-trigger" src="closed.png" alt="+"/> Here is the caller graph for this function:</div>
+<div id="dynsection-1-summary" class="dynsummary" style="display:block;">
+</div>
+<div id="dynsection-1-content" class="dyncontent" style="display:none;">
+<div class="center"><iframe scrolling="no" frameborder="0" src="namespaceanonymous__namespace_02gstkalman_8cpp_03_a95c3fa1bc34fd840ccaf6161049bad5a_icgraph.svg" width="384" height="67"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe>
 </div>
 </div>
 
@@ -291,10 +439,82 @@ Variables</h2></td></tr>
 </div><div class="memdoc">
 
 <p>Instantiates the element. </p>
+<p >Nothing to do for now. </p>
 
-<p class="definition">Definition at line <a class="el" href="gstkalman_8cpp_source.xhtml#l00118">118</a> of file <a class="el" href="gstkalman_8cpp_source.xhtml">gstkalman.cpp</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">  118</span>{ <span class="keyword">static_cast&lt;</span><span class="keywordtype">void</span><span class="keyword">&gt;</span>(element); }</div>
+<p class="definition">Definition at line <a class="el" href="gstkalman_8cpp_source.xhtml#l00195">195</a> of file <a class="el" href="gstkalman_8cpp_source.xhtml">gstkalman.cpp</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">  195</span>{ <span class="keyword">static_cast&lt;</span><span class="keywordtype">void</span><span class="keyword">&gt;</span>(element); }</div>
 </div><!-- fragment -->
+</div>
+</div>
+<a id="ab2a2b863bf64abd37deb951e488c7e60" name="ab2a2b863bf64abd37deb951e488c7e60"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ab2a2b863bf64abd37deb951e488c7e60">&#9670;&nbsp;</a></span>gst_kalman_set_property()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void anonymous_namespace gstkalman anonymous_namespace{gstkalman.cpp}::cpp::gst_kalman_set_property </td>
+          <td>(</td>
+          <td class="paramtype">GObject *&#160;</td>
+          <td class="paramname"><em>object</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">guint&#160;</td>
+          <td class="paramname"><em>prop_id</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const GValue *&#160;</td>
+          <td class="paramname"><em>value</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">GParamSpec *&#160;</td>
+          <td class="paramname"><em>pspec</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Update the element instance data on property change. </p>
+
+<p class="definition">Definition at line <a class="el" href="gstkalman_8cpp_source.xhtml#l00164">164</a> of file <a class="el" href="gstkalman_8cpp_source.xhtml">gstkalman.cpp</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">  165</span>                                                                     {</div>
+<div class="line"><span class="lineno">  166</span>  <span class="keyword">static_cast&lt;</span><span class="keywordtype">void</span><span class="keyword">&gt;</span>(pspec);</div>
+<div class="line"><span class="lineno">  167</span> </div>
+<div class="line"><span class="lineno">  168</span>  <span class="keywordflow">switch</span> (<span class="keyword">auto</span> *element{GST_KALMAN(<span class="keywordtype">object</span>)}; prop_id) {</div>
+<div class="line"><span class="lineno">  169</span>  <span class="keywordflow">case</span> <a class="code hl_enumvalue" href="namespaceanonymous__namespace_02gstkalman_8cpp_03.xhtml#a29bac156c28c7613bee4b9a434ce5aefafd1688c9f310fa3e143846ff7e8fdd1b">property::p</a>:</div>
+<div class="line"><span class="lineno">  170</span>    element-&gt;p = g_value_get_float(value);</div>
+<div class="line"><span class="lineno">  171</span>    <span class="keywordflow">break</span>;</div>
+<div class="line"><span class="lineno">  172</span>  <span class="keywordflow">case</span> <a class="code hl_enumvalue" href="namespaceanonymous__namespace_02gstkalman_8cpp_03.xhtml#a29bac156c28c7613bee4b9a434ce5aefaa0b7a9e5147368162297e315efc1657f">property::r</a>:</div>
+<div class="line"><span class="lineno">  173</span>    element-&gt;r = g_value_get_float(value);</div>
+<div class="line"><span class="lineno">  174</span>    <span class="keywordflow">break</span>;</div>
+<div class="line"><span class="lineno">  175</span>  <span class="keywordflow">default</span>:</div>
+<div class="line"><span class="lineno">  176</span>    G_OBJECT_WARN_INVALID_PROPERTY_ID(<span class="keywordtype">object</span>, prop_id, pspec);</div>
+<div class="line"><span class="lineno">  177</span>    <span class="keywordflow">break</span>;</div>
+<div class="line"><span class="lineno">  178</span>  }</div>
+<div class="line"><span class="lineno">  179</span>}</div>
+</div><!-- fragment -->
+<p class="reference">References <a class="el" href="gstkalman_8cpp_source.xhtml#l00081">p</a>, and <a class="el" href="gstkalman_8cpp_source.xhtml#l00081">r</a>.</p>
+
+<p class="reference">Referenced by <a class="el" href="gstkalman_8cpp_source.xhtml#l00124">gst_kalman_class_init()</a>.</p>
+<div id="dynsection-2" onclick="return toggleVisibility(this)" class="dynheader closed" style="cursor:pointer;">
+  <img id="dynsection-2-trigger" src="closed.png" alt="+"/> Here is the caller graph for this function:</div>
+<div id="dynsection-2-summary" class="dynsummary" style="display:block;">
+</div>
+<div id="dynsection-2-content" class="dyncontent" style="display:none;">
+<div class="center"><iframe scrolling="no" frameborder="0" src="namespaceanonymous__namespace_02gstkalman_8cpp_03_ab2a2b863bf64abd37deb951e488c7e60_icgraph.svg" width="384" height="67"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe>
+</div>
+</div>
+
 </div>
 </div>
 <a id="ab2d338224aa3266bd923e4124b228344" name="ab2d338224aa3266bd923e4124b228344"></a>
@@ -307,7 +527,7 @@ Variables</h2></td></tr>
           <td class="memname">auto anonymous_namespace gstkalman anonymous_namespace{gstkalman.cpp}::cpp::gst_kalman_transform_in_place </td>
           <td>(</td>
           <td class="paramtype">GstBaseTransform *&#160;</td>
-          <td class="paramname"><em>base</em>, </td>
+          <td class="paramname"><em>element_base</em>, </td>
         </tr>
         <tr>
           <td class="paramkey"></td>
@@ -318,30 +538,93 @@ Variables</h2></td></tr>
         <tr>
           <td></td>
           <td>)</td>
-          <td></td><td> -&gt; GstFlowReturn</td>
+          <td></td><td> -&gt;  GstFlowReturn</td>
         </tr>
       </table>
 </div><div class="memdoc">
 
 <p>Processes the data buffer in-place. </p>
+<p >Filters the frame pixels. Reset and reinitialize the filters on resolution change. </p>
+<dl class="todo"><dt><b><a class="el" href="todo.xhtml#_todo000003">Todo:</a></b></dt><dd>Should the buffer be unmapped even on failed status? </dd></dl>
+<dl class="todo"><dt><b><a class="el" href="todo.xhtml#_todo000004">Todo:</a></b></dt><dd>Support additional formats, hardwares, contexts, and strategies. </dd></dl>
+<dl class="todo"><dt><b><a class="el" href="todo.xhtml#_todo000005">Todo:</a></b></dt><dd>Resolution is a poor indicator of the need to re-initialized the filters. </dd></dl>
+<dl class="todo"><dt><b><a class="el" href="todo.xhtml#_todo000006">Todo:</a></b></dt><dd></dd></dl>
+<dl class="todo"><dt><b><a class="el" href="todo.xhtml#_todo000007">Todo:</a></b></dt><dd>Should this check be performed as an event, signal, or capabilities change instead of part of the transform? </dd></dl>
+<dl class="todo"><dt><b><a class="el" href="todo.xhtml#_todo000008">Todo:</a></b></dt><dd>Support in-place non-default construction to avoid the secondary initialization loop? </dd></dl>
+<dl class="todo"><dt><b><a class="el" href="todo.xhtml#_todo000003">Todo:</a></b></dt><dd>Should the buffer be unmapped even on failed status? </dd></dl>
+<dl class="todo"><dt><b><a class="el" href="todo.xhtml#_todo000004">Todo:</a></b></dt><dd>Support additional formats, hardwares, contexts, and strategies. </dd></dl>
+<dl class="todo"><dt><b><a class="el" href="todo.xhtml#_todo000005">Todo:</a></b></dt><dd>Resolution is a poor indicator of the need to re-initialized the filters. </dd></dl>
+<dl class="todo"><dt><b><a class="el" href="todo.xhtml#_todo000006">Todo:</a></b></dt><dd></dd></dl>
+<dl class="todo"><dt><b><a class="el" href="todo.xhtml#_todo000007">Todo:</a></b></dt><dd>Should this check be performed as an event, signal, or capabilities change instead of part of the transform? </dd></dl>
+<dl class="todo"><dt><b><a class="el" href="todo.xhtml#_todo000008">Todo:</a></b></dt><dd>Support in-place non-default construction to avoid the secondary initialization loop? </dd></dl>
 
-<p class="definition">Definition at line <a class="el" href="gstkalman_8cpp_source.xhtml#l00121">121</a> of file <a class="el" href="gstkalman_8cpp_source.xhtml">gstkalman.cpp</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">  122</span>                                                                       {</div>
-<div class="line"><span class="lineno">  123</span> </div>
-<div class="line"><span class="lineno">  124</span>  <span class="keywordflow">if</span> (GST_CLOCK_TIME_IS_VALID(GST_BUFFER_TIMESTAMP(output))) {</div>
-<div class="line"><span class="lineno">  125</span>    gst_object_sync_values(GST_OBJECT(element_base),</div>
-<div class="line"><span class="lineno">  126</span>                           GST_BUFFER_TIMESTAMP(output));</div>
-<div class="line"><span class="lineno">  127</span>  }</div>
-<div class="line"><span class="lineno">  128</span> </div>
-<div class="line"><span class="lineno">  129</span>  <span class="keywordflow">return</span> GST_FLOW_OK;</div>
-<div class="line"><span class="lineno">  130</span>}</div>
+<p class="definition">Definition at line <a class="el" href="gstkalman_8cpp_source.xhtml#l00201">201</a> of file <a class="el" href="gstkalman_8cpp_source.xhtml">gstkalman.cpp</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">  202</span>                                                                       {</div>
+<div class="line"><span class="lineno">  203</span> </div>
+<div class="line"><span class="lineno">  204</span>  <span class="keywordflow">if</span> (GST_CLOCK_TIME_IS_VALID(GST_BUFFER_TIMESTAMP(output))) {</div>
+<div class="line"><span class="lineno">  205</span>    gst_object_sync_values(GST_OBJECT(element_base),</div>
+<div class="line"><span class="lineno">  206</span>                           GST_BUFFER_TIMESTAMP(output));</div>
+<div class="line"><span class="lineno">  207</span>  }</div>
+<div class="line"><span class="lineno">  208</span> </div>
+<div class="line"><span class="lineno">  209</span>  <span class="keyword">const</span> sr::unique_resource source_capabilities{</div>
+<div class="line"><span class="lineno">  210</span>      gst_pad_get_current_caps(element_base-&gt;srcpad), gst_caps_unref};</div>
+<div class="line"><span class="lineno">  211</span>  g_return_val_if_fail(source_capabilities.get(), GST_FLOW_ERROR);</div>
+<div class="line"><span class="lineno">  212</span> </div>
+<div class="line"><span class="lineno">  213</span>  <span class="keyword">const</span> <span class="keyword">auto</span> *source_data{gst_caps_get_structure(source_capabilities.get(), 0)};</div>
+<div class="line"><span class="lineno">  214</span>  g_return_val_if_fail(source_data, GST_FLOW_ERROR);</div>
+<div class="line"><span class="lineno">  215</span> </div>
+<div class="line"><span class="lineno">  216</span>  gint width{0};</div>
+<div class="line"><span class="lineno">  217</span>  g_return_val_if_fail(gst_structure_get_int(source_data, <span class="stringliteral">&quot;width&quot;</span>, &amp;width),</div>
+<div class="line"><span class="lineno">  218</span>                       GST_FLOW_ERROR);</div>
+<div class="line"><span class="lineno">  219</span> </div>
+<div class="line"><span class="lineno">  220</span>  gint height{0};</div>
+<div class="line"><span class="lineno">  221</span>  g_return_val_if_fail(gst_structure_get_int(source_data, <span class="stringliteral">&quot;height&quot;</span>, &amp;height),</div>
+<div class="line"><span class="lineno">  222</span>                       GST_FLOW_ERROR);</div>
+<div class="line"><span class="lineno">  223</span> </div>
+<div class="line"><span class="lineno">  224</span>  <span class="keyword">auto</span> *element{GST_KALMAN(element_base)};</div>
+<div class="line"><span class="lineno">  225</span>  <span class="keyword">auto</span> &amp;filters{element-&gt;filters};</div>
+<div class="line"><span class="lineno">  226</span>  <span class="keyword">const</span> std::size_t resolution{<span class="keyword">static_cast&lt;</span>std::size_t<span class="keyword">&gt;</span>(width * height)};</div>
+<div class="line"><span class="lineno">  227</span> </div>
+<div class="line"><span class="lineno">  228</span>  GstMapInfo map;</div>
+<div class="line"><span class="lineno">  229</span>  <span class="keyword">const</span> sr::unique_resource mapping{</div>
+<div class="line"><span class="lineno">  230</span>      gst_buffer_map(output, &amp;map, GST_MAP_READWRITE),</div>
+<div class="line"><span class="lineno">  231</span>      [&amp;map, &amp;output](gboolean status) {</div>
+<div class="line"><span class="lineno">  233</span>        <span class="keyword">static_cast&lt;</span><span class="keywordtype">void</span><span class="keyword">&gt;</span>(status);</div>
+<div class="line"><span class="lineno">  234</span>        gst_buffer_unmap(output, &amp;map);</div>
+<div class="line"><span class="lineno">  235</span>      }};</div>
+<div class="line"><span class="lineno">  236</span> </div>
+<div class="line"><span class="lineno">  238</span>  <span class="keyword">const</span> std::span pixels{map.data, resolution};</div>
+<div class="line"><span class="lineno">  239</span> </div>
+<div class="line"><span class="lineno">  244</span>  <span class="keywordflow">if</span> (resolution != filters.size()) {</div>
+<div class="line"><span class="lineno">  247</span>    filters = std::vector&lt;kalman&gt;{resolution};</div>
+<div class="line"><span class="lineno">  248</span>    std::transform(std::execution::par_unseq, std::begin(pixels),</div>
+<div class="line"><span class="lineno">  249</span>                   std::end(pixels), std::begin(filters), std::begin(pixels),</div>
+<div class="line"><span class="lineno">  250</span>                   [element](<span class="keyword">const</span> <span class="keyword">auto</span> &amp;pixel, <span class="keyword">auto</span> &amp;filter) {</div>
+<div class="line"><span class="lineno">  251</span>                     filter.x(pixel);</div>
+<div class="line"><span class="lineno">  252</span>                     filter.p(element-&gt;p);</div>
+<div class="line"><span class="lineno">  253</span>                     filter.r(element-&gt;r);</div>
+<div class="line"><span class="lineno">  254</span>                     <span class="keywordflow">return</span> pixel;</div>
+<div class="line"><span class="lineno">  255</span>                   });</div>
+<div class="line"><span class="lineno">  256</span>  } <span class="keywordflow">else</span> {</div>
+<div class="line"><span class="lineno">  257</span>    std::transform(std::execution::par_unseq, std::begin(pixels),</div>
+<div class="line"><span class="lineno">  258</span>                   std::end(pixels), std::begin(filters), std::begin(pixels),</div>
+<div class="line"><span class="lineno">  259</span>                   []&lt;<span class="keyword">typename</span> Pixel&gt;(<span class="keyword">const</span> Pixel &amp;pixel, <span class="keyword">auto</span> &amp;filter) {</div>
+<div class="line"><span class="lineno">  260</span>                     filter.update(pixel);</div>
+<div class="line"><span class="lineno">  261</span>                     <span class="keyword">using </span>limit = std::numeric_limits&lt;Pixel&gt;;</div>
+<div class="line"><span class="lineno">  262</span>                     <span class="keywordflow">return</span> std::clamp&lt;Pixel&gt;(filter.x(), limit::min(),</div>
+<div class="line"><span class="lineno">  263</span>                                              limit::max());</div>
+<div class="line"><span class="lineno">  264</span>                   });</div>
+<div class="line"><span class="lineno">  265</span>  }</div>
+<div class="line"><span class="lineno">  266</span> </div>
+<div class="line"><span class="lineno">  267</span>  <span class="keywordflow">return</span> GST_FLOW_OK;</div>
+<div class="line"><span class="lineno">  268</span>}</div>
 </div><!-- fragment -->
-<p class="reference">Referenced by <a class="el" href="gstkalman_8cpp_source.xhtml#l00094">gst_kalman_class_init()</a>.</p>
-<div id="dynsection-1" onclick="return toggleVisibility(this)" class="dynheader closed" style="cursor:pointer;">
-  <img id="dynsection-1-trigger" src="closed.png" alt="+"/> Here is the caller graph for this function:</div>
-<div id="dynsection-1-summary" class="dynsummary" style="display:block;">
+<p class="reference">Referenced by <a class="el" href="gstkalman_8cpp_source.xhtml#l00124">gst_kalman_class_init()</a>.</p>
+<div id="dynsection-3" onclick="return toggleVisibility(this)" class="dynheader closed" style="cursor:pointer;">
+  <img id="dynsection-3-trigger" src="closed.png" alt="+"/> Here is the caller graph for this function:</div>
+<div id="dynsection-3-summary" class="dynsummary" style="display:block;">
 </div>
-<div id="dynsection-1-content" class="dyncontent" style="display:none;">
+<div id="dynsection-3-content" class="dyncontent" style="display:none;">
 <div class="center"><iframe scrolling="no" frameborder="0" src="namespaceanonymous__namespace_02gstkalman_8cpp_03_ab2d338224aa3266bd923e4124b228344_icgraph.svg" width="410" height="67"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe>
 </div>
 </div>
@@ -369,7 +652,7 @@ Variables</h2></td></tr>
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype">kalman&#160;</td>
+          <td class="paramtype"><a class="el" href="namespaceanonymous__namespace_02gstkalman_8cpp_03.xhtml#ab51f675c361d36c316eca7e9f114250e">kalman</a>&#160;</td>
           <td class="paramname">, </td>
         </tr>
         <tr>
@@ -436,10 +719,11 @@ Variables</h2></td></tr>
 
 <p>Registers the plugin element. </p>
 
-<p class="definition">Definition at line <a class="el" href="gstkalman_8cpp_source.xhtml#l00089">89</a> of file <a class="el" href="gstkalman_8cpp_source.xhtml">gstkalman.cpp</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">   89</span>                                               {</div>
-<div class="line"><span class="lineno">   90</span>  <span class="keywordflow">return</span> GST_ELEMENT_REGISTER(kalman, plugin);</div>
-<div class="line"><span class="lineno">   91</span>}</div>
+<p class="definition">Definition at line <a class="el" href="gstkalman_8cpp_source.xhtml#l00116">116</a> of file <a class="el" href="gstkalman_8cpp_source.xhtml">gstkalman.cpp</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">  116</span>                                               {</div>
+<div class="line"><span class="lineno">  117</span>  <span class="keywordflow">return</span> GST_ELEMENT_REGISTER(<a class="code hl_typedef" href="namespaceanonymous__namespace_02gstkalman_8cpp_03.xhtml#ab51f675c361d36c316eca7e9f114250e">kalman</a>, plugin);</div>
+<div class="line"><span class="lineno">  118</span>}</div>
+<div class="ttc" id="anamespaceanonymous__namespace_02gstkalman_8cpp_03_xhtml_ab51f675c361d36c316eca7e9f114250e"><div class="ttname"><a href="namespaceanonymous__namespace_02gstkalman_8cpp_03.xhtml#ab51f675c361d36c316eca7e9f114250e">anonymous_namespace{gstkalman.cpp}::kalman</a></div><div class="ttdeci">fcarouge::kalman&lt; float, float &gt; kalman</div><div class="ttdef"><b>Definition:</b> <a href="gstkalman_8cpp_source.xhtml#l00058">gstkalman.cpp:58</a></div></div>
 </div><!-- fragment -->
 </div>
 </div>
@@ -466,9 +750,9 @@ Variables</h2></td></tr>
 <b>Initial value:</b><div class="fragment"><div class="line">{</div>
 <div class="line">    <span class="stringliteral">&quot;Francois Carouge &lt;francois.carouge@gmail.com&gt;&quot;</span>}</div>
 </div><!-- fragment -->
-<p class="definition">Definition at line <a class="el" href="gstkalman_8cpp_source.xhtml#l00056">56</a> of file <a class="el" href="gstkalman_8cpp_source.xhtml">gstkalman.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="gstkalman_8cpp_source.xhtml#l00089">89</a> of file <a class="el" href="gstkalman_8cpp_source.xhtml">gstkalman.cpp</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="gstkalman_8cpp_source.xhtml#l00094">gst_kalman_class_init()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="gstkalman_8cpp_source.xhtml#l00124">gst_kalman_class_init()</a>.</p>
 
 </div>
 </div>
@@ -492,9 +776,9 @@ Variables</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="gstkalman_8cpp_source.xhtml#l00060">60</a> of file <a class="el" href="gstkalman_8cpp_source.xhtml">gstkalman.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="gstkalman_8cpp_source.xhtml#l00093">93</a> of file <a class="el" href="gstkalman_8cpp_source.xhtml">gstkalman.cpp</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="gstkalman_8cpp_source.xhtml#l00094">gst_kalman_class_init()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="gstkalman_8cpp_source.xhtml#l00124">gst_kalman_class_init()</a>.</p>
 
 </div>
 </div>
@@ -518,9 +802,9 @@ Variables</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="gstkalman_8cpp_source.xhtml#l00051">51</a> of file <a class="el" href="gstkalman_8cpp_source.xhtml">gstkalman.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="gstkalman_8cpp_source.xhtml#l00084">84</a> of file <a class="el" href="gstkalman_8cpp_source.xhtml">gstkalman.cpp</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="gstkalman_8cpp_source.xhtml#l00094">gst_kalman_class_init()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="gstkalman_8cpp_source.xhtml#l00124">gst_kalman_class_init()</a>.</p>
 
 </div>
 </div>
@@ -544,9 +828,9 @@ Variables</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="gstkalman_8cpp_source.xhtml#l00053">53</a> of file <a class="el" href="gstkalman_8cpp_source.xhtml">gstkalman.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="gstkalman_8cpp_source.xhtml#l00086">86</a> of file <a class="el" href="gstkalman_8cpp_source.xhtml">gstkalman.cpp</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="gstkalman_8cpp_source.xhtml#l00094">gst_kalman_class_init()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="gstkalman_8cpp_source.xhtml#l00124">gst_kalman_class_init()</a>.</p>
 
 </div>
 </div>
@@ -562,7 +846,7 @@ Variables</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="gstkalman_8cpp_source.xhtml#l00085">85</a> of file <a class="el" href="gstkalman_8cpp_source.xhtml">gstkalman.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="gstkalman_8cpp_source.xhtml#l00112">112</a> of file <a class="el" href="gstkalman_8cpp_source.xhtml">gstkalman.cpp</a>.</p>
 
 </div>
 </div>
@@ -586,7 +870,7 @@ Variables</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="gstkalman_8cpp_source.xhtml#l00055">55</a> of file <a class="el" href="gstkalman_8cpp_source.xhtml">gstkalman.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="gstkalman_8cpp_source.xhtml#l00088">88</a> of file <a class="el" href="gstkalman_8cpp_source.xhtml">gstkalman.cpp</a>.</p>
 
 </div>
 </div>
@@ -610,9 +894,9 @@ Variables</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="gstkalman_8cpp_source.xhtml#l00052">52</a> of file <a class="el" href="gstkalman_8cpp_source.xhtml">gstkalman.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="gstkalman_8cpp_source.xhtml#l00085">85</a> of file <a class="el" href="gstkalman_8cpp_source.xhtml">gstkalman.cpp</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="gstkalman_8cpp_source.xhtml#l00094">gst_kalman_class_init()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="gstkalman_8cpp_source.xhtml#l00124">gst_kalman_class_init()</a>.</p>
 
 </div>
 </div>
@@ -636,7 +920,7 @@ Variables</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="gstkalman_8cpp_source.xhtml#l00050">50</a> of file <a class="el" href="gstkalman_8cpp_source.xhtml">gstkalman.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="gstkalman_8cpp_source.xhtml#l00083">83</a> of file <a class="el" href="gstkalman_8cpp_source.xhtml">gstkalman.cpp</a>.</p>
 
 </div>
 </div>
@@ -662,7 +946,7 @@ Variables</h2></td></tr>
 <b>Initial value:</b><div class="fragment"><div class="line">{</div>
 <div class="line">    <span class="stringliteral">&quot;https://github.com/FrancoisCarouge/GstKalman&quot;</span>}</div>
 </div><!-- fragment -->
-<p class="definition">Definition at line <a class="el" href="gstkalman_8cpp_source.xhtml#l00058">58</a> of file <a class="el" href="gstkalman_8cpp_source.xhtml">gstkalman.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="gstkalman_8cpp_source.xhtml#l00091">91</a> of file <a class="el" href="gstkalman_8cpp_source.xhtml">gstkalman.cpp</a>.</p>
 
 </div>
 </div>
@@ -686,7 +970,7 @@ Variables</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="gstkalman_8cpp_source.xhtml#l00054">54</a> of file <a class="el" href="gstkalman_8cpp_source.xhtml">gstkalman.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="gstkalman_8cpp_source.xhtml#l00087">87</a> of file <a class="el" href="gstkalman_8cpp_source.xhtml">gstkalman.cpp</a>.</p>
 
 </div>
 </div>
@@ -696,7 +980,7 @@ Variables</h2></td></tr>
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
     <li class="navelem"><a class="el" href="namespaceanonymous__namespace_02gstkalman_8cpp_03.xhtml">anonymous_namespace{gstkalman.cpp}</a></li>
-    <li class="footer">Generated on Fri Dec 30 2022 02:20:19 for GstKalman by <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.4 </li>
+    <li class="footer">Generated on Sun Jan 1 2023 05:00:39 for GstKalman by <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.4 </li>
   </ul>
 </div>
 </body>

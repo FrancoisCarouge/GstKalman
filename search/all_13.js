@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['version_0',['version',['../namespaceanonymous__namespace_02gstkalman_8cpp_03.xhtml#a576f016ece258ae5aa27dde32fcf454a',1,'anonymous_namespace{gstkalman.cpp}']]]
+  ['use_0',['use',['../_l_i_c_e_n_s_e_8txt.xhtml#a842ca74cb0de3caf554ff16be7a7f6ea',1,'LICENSE.txt']]]
 ];

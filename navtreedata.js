@@ -65,12 +65,16 @@ var NAVTREE =
       [ "Supported Versions", "md__github_workspace__s_e_c_u_r_i_t_y.xhtml#autotoc_md30", null ],
       [ "Reporting a Vulnerability", "md__github_workspace__s_e_c_u_r_i_t_y.xhtml#autotoc_md31", null ]
     ] ],
+    [ "Todo List", "todo.xhtml", null ],
     [ "Namespaces", "namespaces.xhtml", [
       [ "Namespace List", "namespaces.xhtml", "namespaces_dup" ],
       [ "Namespace Members", "namespacemembers.xhtml", [
         [ "All", "namespacemembers.xhtml", null ],
         [ "Functions", "namespacemembers_func.xhtml", null ],
-        [ "Variables", "namespacemembers_vars.xhtml", null ]
+        [ "Variables", "namespacemembers_vars.xhtml", null ],
+        [ "Typedefs", "namespacemembers_type.xhtml", null ],
+        [ "Enumerations", "namespacemembers_enum.xhtml", null ],
+        [ "Enumerator", "namespacemembers_eval.xhtml", null ]
       ] ]
     ] ],
     [ "Classes", "annotated.xhtml", [
@@ -86,8 +90,7 @@ var NAVTREE =
       [ "File Members", "globals.xhtml", [
         [ "All", "globals.xhtml", null ],
         [ "Functions", "globals_func.xhtml", null ],
-        [ "Variables", "globals_vars.xhtml", null ],
-        [ "Macros", "globals_defs.xhtml", null ]
+        [ "Variables", "globals_vars.xhtml", null ]
       ] ]
     ] ]
   ] ]

@@ -30,7 +30,10 @@ var menudata={children:[
 {text:"Namespace Members",url:"namespacemembers.xhtml",children:[
 {text:"All",url:"namespacemembers.xhtml"},
 {text:"Functions",url:"namespacemembers_func.xhtml"},
-{text:"Variables",url:"namespacemembers_vars.xhtml"}]}]},
+{text:"Variables",url:"namespacemembers_vars.xhtml"},
+{text:"Typedefs",url:"namespacemembers_type.xhtml"},
+{text:"Enumerations",url:"namespacemembers_enum.xhtml"},
+{text:"Enumerator",url:"namespacemembers_eval.xhtml"}]}]},
 {text:"Classes",url:"annotated.xhtml",children:[
 {text:"Class List",url:"annotated.xhtml"},
 {text:"Class Index",url:"classes.xhtml"},
@@ -42,5 +45,4 @@ var menudata={children:[
 {text:"File Members",url:"globals.xhtml",children:[
 {text:"All",url:"globals.xhtml"},
 {text:"Functions",url:"globals_func.xhtml"},
-{text:"Variables",url:"globals_vars.xhtml"},
-{text:"Macros",url:"globals_defs.xhtml"}]}]}]}
+{text:"Variables",url:"globals_vars.xhtml"}]}]}]}

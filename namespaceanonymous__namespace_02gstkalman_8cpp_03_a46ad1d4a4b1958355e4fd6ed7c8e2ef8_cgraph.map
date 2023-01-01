@@ -1,4 +1,6 @@
 <map id="anonymous_namespace{gstkalman::cpp}::gst_kalman_class_init" name="anonymous_namespace{gstkalman::cpp}::gst_kalman_class_init">
-<area shape="rect" id="node1" title="Defines the element details." alt="" coords="5,5,168,61"/>
-<area shape="rect" id="node2" href="$namespaceanonymous__namespace_02gstkalman_8cpp_03.xhtml#ab2d338224aa3266bd923e4124b228344" title="Processes the data buffer in&#45;place." alt="" coords="216,5,404,61"/>
+<area shape="rect" id="node1" title="Defines the element details." alt="" coords="5,85,168,141"/>
+<area shape="rect" id="node2" href="$namespaceanonymous__namespace_02gstkalman_8cpp_03.xhtml#a95c3fa1bc34fd840ccaf6161049bad5a" title="Provides the element instance data on property request." alt="" coords="229,5,391,61"/>
+<area shape="rect" id="node3" href="$namespaceanonymous__namespace_02gstkalman_8cpp_03.xhtml#ab2a2b863bf64abd37deb951e488c7e60" title="Update the element instance data on property change." alt="" coords="229,85,391,141"/>
+<area shape="rect" id="node4" href="$namespaceanonymous__namespace_02gstkalman_8cpp_03.xhtml#ab2d338224aa3266bd923e4124b228344" title="Processes the data buffer in&#45;place." alt="" coords="216,165,404,221"/>
 </map>

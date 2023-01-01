@@ -1,5 +1,4 @@
 var searchData=
 [
-  ['sell_0',['sell',['../_l_i_c_e_n_s_e_8txt.xhtml#a3e5d6c430e9c2cde02449af9b69ae168',1,'LICENSE.txt']]],
-  ['software_1',['software',['../_l_i_c_e_n_s_e_8txt.xhtml#ab20fc6251e4dbdd80db7028a31b57d56',1,'LICENSE.txt']]]
+  ['r_0',['r',['../structanonymous__namespace_02gstkalman_8cpp_03_1_1___gst_kalman.xhtml#a2254e39b5633c37042311fe707278b43',1,'anonymous_namespace{gstkalman.cpp}::_GstKalman']]]
 ];

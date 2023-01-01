@@ -88,7 +88,67 @@ $(document).ready(function(){initNavTree('index.xhtml',''); initResizable(); });
   <div class="headertitle"><div class="title">A GStreamer Kalman Filter Video Plugin in C++ </div></div>
 </div><!--header-->
 <div class="contents">
-<div class="textblock"><p ><a class="anchor" id="md__github_workspace_README"></a></p><ul>
+<div class="textblock"><p ><a class="anchor" id="md__github_workspace_README"></a> </p><div class="fragment"><div class="line">Factory Details:</div>
+<div class="line">  Rank                     none (0)</div>
+<div class="line">  Long-name                Kalman Filter</div>
+<div class="line">  Klass                    Filter/Effect/Video</div>
+<div class="line">  Description              A video Kalman filter plugin.</div>
+<div class="line">  Author                   Francois Carouge &lt;francois.carouge@gmail.com&gt;</div>
+<div class="line"> </div>
+<div class="line">Plugin Details:</div>
+<div class="line">  Name                     kalman</div>
+<div class="line">  Description              A video Kalman filter plugin.</div>
+<div class="line">  Filename                 /mnt/f/Drive/Projects/cpp/gstkalman/build/source/libgstkalman.so</div>
+<div class="line">  Version                  0.1.0</div>
+<div class="line">  License                  Unlicense</div>
+<div class="line">  Source module            kalman</div>
+<div class="line">  Binary package           kalman</div>
+<div class="line">  Origin URL               https://github.com/FrancoisCarouge/GstKalman</div>
+<div class="line"> </div>
+<div class="line">GObject</div>
+<div class="line"> +----GInitiallyUnowned</div>
+<div class="line">       +----GstObject</div>
+<div class="line">             +----GstElement</div>
+<div class="line">                   +----GstBaseTransform</div>
+<div class="line">                         +----GstKalman</div>
+<div class="line"> </div>
+<div class="line">Pad Templates:</div>
+<div class="line">  SINK template: &#39;sink&#39;</div>
+<div class="line">    Availability: Always</div>
+<div class="line">    Capabilities:</div>
+<div class="line">      video/x-raw</div>
+<div class="line">  </div>
+<div class="line">  SRC template: &#39;src&#39;</div>
+<div class="line">    Availability: Always</div>
+<div class="line">    Capabilities:</div>
+<div class="line">      video/x-raw</div>
+<div class="line"> </div>
+<div class="line">Element has no clocking capabilities.</div>
+<div class="line">Element has no URI handling capabilities.</div>
+<div class="line"> </div>
+<div class="line">Pads:</div>
+<div class="line">  SINK: &#39;sink&#39;</div>
+<div class="line">    Pad Template: &#39;sink&#39;</div>
+<div class="line">  SRC: &#39;src&#39;</div>
+<div class="line">    Pad Template: &#39;src&#39;</div>
+<div class="line"> </div>
+<div class="line">Element Properties:</div>
+<div class="line">  name                : The name of the object</div>
+<div class="line">                        flags: readable, writable, 0x2000</div>
+<div class="line">                        String. Default: &quot;kalman0&quot;</div>
+<div class="line">  p                   : Initialize estimate uncertainty.</div>
+<div class="line">                        flags: readable, writable</div>
+<div class="line">                        Float. Range:               0 -    3.402823e+38 Default:               0 </div>
+<div class="line">  parent              : The parent of the object</div>
+<div class="line">                        flags: readable, writable, 0x2000</div>
+<div class="line">                        Object of type &quot;GstObject&quot;</div>
+<div class="line">  qos                 : Handle Quality-of-Service events</div>
+<div class="line">                        flags: readable, writable</div>
+<div class="line">                        Boolean. Default: false</div>
+<div class="line">  r                   : Initialize output uncertainty.</div>
+<div class="line">                        flags: readable, writable</div>
+<div class="line">                        Float. Range:               0 -    3.402823e+38 Default:               0 </div>
+</div><!-- fragment --><ul>
 <li>A GStreamer Kalman Filter Video Plugin in C++</li>
 <li>Examples</li>
 <li>Installation</li>
@@ -105,7 +165,8 @@ $(document).ready(function(){initNavTree('index.xhtml',''); initResizable(); });
 </ul>
 <h1><a class="anchor" id="autotoc_md19"></a>
 Examples</h1>
-<h1><a class="anchor" id="autotoc_md20"></a>
+<div class="fragment"><div class="line">gst-launch-1.0 uridecodebin uri=&quot;file:///path/to/roundhay_garden.mp4&quot; ! videoconvert ! kalman p=100 r=100 ! autovideosink</div>
+</div><!-- fragment --><h1><a class="anchor" id="autotoc_md20"></a>
 Installation</h1>
 <h1><a class="anchor" id="autotoc_md21"></a>
 Reference</h1>
@@ -141,7 +202,7 @@ License</h1>
 <!-- start footer part -->
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
-    <li class="footer">Generated on Fri Dec 30 2022 02:20:19 for GstKalman by <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.4 </li>
+    <li class="footer">Generated on Sun Jan 1 2023 05:00:39 for GstKalman by <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.4 </li>
   </ul>
 </div>
 </body>
