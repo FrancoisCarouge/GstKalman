@@ -1,5 +1,68 @@
 # A GStreamer Kalman Filter Video Plugin in C++
 
+```
+Factory Details:
+  Rank                     none (0)
+  Long-name                Kalman Filter
+  Klass                    Filter/Effect/Video
+  Description              A video Kalman filter plugin.
+  Author                   Francois Carouge <francois.carouge@gmail.com>
+
+Plugin Details:
+  Name                     kalman
+  Description              A video Kalman filter plugin.
+  Filename                 /mnt/f/Drive/Projects/cpp/gstkalman/build/source/libgstkalman.so
+  Version                  0.1.0
+  License                  Unlicense
+  Source module            kalman
+  Binary package           kalman
+  Origin URL               https://github.com/FrancoisCarouge/GstKalman
+
+GObject
+ +----GInitiallyUnowned
+       +----GstObject
+             +----GstElement
+                   +----GstBaseTransform
+                         +----GstKalman
+
+Pad Templates:
+  SINK template: 'sink'
+    Availability: Always
+    Capabilities:
+      video/x-raw
+  
+  SRC template: 'src'
+    Availability: Always
+    Capabilities:
+      video/x-raw
+
+Element has no clocking capabilities.
+Element has no URI handling capabilities.
+
+Pads:
+  SINK: 'sink'
+    Pad Template: 'sink'
+  SRC: 'src'
+    Pad Template: 'src'
+
+Element Properties:
+  name                : The name of the object
+                        flags: readable, writable, 0x2000
+                        String. Default: "kalman0"
+  p                   : Initialize estimate uncertainty.
+                        flags: readable, writable
+                        Float. Range:               0 -    3.402823e+38 Default:               0 
+  parent              : The parent of the object
+                        flags: readable, writable, 0x2000
+                        Object of type "GstObject"
+  qos                 : Handle Quality-of-Service events
+                        flags: readable, writable
+                        Boolean. Default: false
+  r                   : Initialize output uncertainty.
+                        flags: readable, writable
+                        Float. Range:               0 -    3.402823e+38 Default:               0 
+```
+
 - [A GStreamer Kalman Filter Video Plugin in C++](#a-gstreamer-kalman-filter-video-plugin-in-c)
 - [Examples](#examples)
 - [Installation](#installation)
@@ -13,6 +76,10 @@
 - [License](#license)
 
 # Examples
+
+```shell
+gst-launch-1.0 uridecodebin uri="file:///path/to/roundhay_garden.mp4" ! videoconvert ! kalman p=100 r=100 ! autovideosink
+```
 
 # Installation
 
