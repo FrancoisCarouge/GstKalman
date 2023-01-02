@@ -21,11 +21,6 @@ jobs:
           libgstreamer-plugins-base1.0-dev \
           libtbb2-dev
         ( cd /tmp
-          git clone --depth 1 "https://github.com/FrancoisCarouge/kalman"
-          cmake -S "kalman" -B "kalman/build"
-          cmake --build "kalman/build" --parallel 4
-          sudo cmake --install "kalman/build" )
-        ( cd /tmp
           git clone --depth 1 "https://github.com/fmtlib/fmt"
           cmake -S "fmt" -B "fmt/build"
           cmake --build "fmt/build" --parallel 4

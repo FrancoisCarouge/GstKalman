@@ -248,7 +248,7 @@ auto gst_kalman_transform_in_place(GstBaseTransform *element_base,
     std::transform(std::execution::par_unseq, std::begin(pixels),
                    std::end(pixels), std::begin(filters), std::begin(pixels),
                    [element](const auto &pixel, auto &filter) {
-                     filter.x(pixel);
+                     filter.x(static_cast<typename kalman::state>(pixel));
                      filter.p(element->p);
                      filter.r(element->r);
                      return pixel;
@@ -258,7 +258,7 @@ auto gst_kalman_transform_in_place(GstBaseTransform *element_base,
     std::transform(std::execution::par_unseq, std::begin(pixels),
                    std::end(pixels), std::begin(filters), std::begin(pixels),
                    []<typename Pixel>(const Pixel &pixel, auto &filter) {
-                     filter.update(pixel);
+                     filter.update(static_cast<typename kalman::output>(pixel));
                      using limit = std::numeric_limits<Pixel>;
                      return std::clamp<Pixel>(filter.x(), limit::min(),
                                               limit::max());

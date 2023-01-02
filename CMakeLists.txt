@@ -61,9 +61,15 @@ find_package(fmt)
 find_package(GLib)
 find_package(GObject)
 find_package(GStreamer)
-find_package(kalman)
 find_package(ScopeGuard)
 find_package(TBB)
+
+FetchContent_Declare(
+  kalman
+  GIT_REPOSITORY "https://github.com/FrancoisCarouge/kalman"
+  GIT_TAG "develop"
+  FIND_PACKAGE_ARGS NAMES kalman)
+FetchContent_MakeAvailable(kalman)
 
 add_subdirectory(sample)
 add_subdirectory(source)
