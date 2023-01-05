@@ -64,12 +64,19 @@ else()
       "-Wwrite-strings")
 endif()
 
-add_library(gstkalman SHARED "gstkalman.cpp")
-target_compile_definitions(gstkalman PRIVATE PACKAGE="kalman")
-target_compile_options(gstkalman PUBLIC ${OPTIONS})
-target_compile_features(gstkalman PUBLIC cxx_std_23)
+add_library(gstkalman INTERFACE)
+target_compile_options(gstkalman INTERFACE ${OPTIONS})
+target_compile_features(gstkalman INTERFACE cxx_std_23)
 target_link_libraries(
-  gstkalman PRIVATE gstkalman_glib gstkalman_gobject gstkalman_gstreamer
-                    kalman::kalman TBB::tbb)
+  gstkalman INTERFACE gstkalman_glib gstkalman_gobject gstkalman_gstreamer
+                      kalman::kalman TBB::tbb)
+
+add_library(gstkalman_library SHARED "gstkalman.cpp")
+set_target_properties(gstkalman_library PROPERTIES OUTPUT_NAME "gstkalman")
+target_compile_definitions(gstkalman_library PRIVATE PACKAGE="kalman")
+target_link_libraries(
+  gstkalman_library PRIVATE gstkalman gstkalman_glib gstkalman_gobject
+                            gstkalman_gstreamer kalman::kalman TBB::tbb)
 
 add_library(gstkalman_main "main.cpp")
+target_link_libraries(gstkalman_main PRIVATE gstkalman)
