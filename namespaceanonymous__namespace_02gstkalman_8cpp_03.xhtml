@@ -551,12 +551,14 @@ Variables</h2></td></tr>
 <dl class="todo"><dt><b><a class="el" href="todo.xhtml#_todo000006">Todo:</a></b></dt><dd></dd></dl>
 <dl class="todo"><dt><b><a class="el" href="todo.xhtml#_todo000007">Todo:</a></b></dt><dd>Should this check be performed as an event, signal, or capabilities change instead of part of the transform? </dd></dl>
 <dl class="todo"><dt><b><a class="el" href="todo.xhtml#_todo000008">Todo:</a></b></dt><dd>Support in-place non-default construction to avoid the secondary initialization loop? </dd></dl>
+<dl class="todo"><dt><b><a class="el" href="todo.xhtml#_todo000009">Todo:</a></b></dt><dd>Use the timestamp of the frame if available? </dd></dl>
 <dl class="todo"><dt><b><a class="el" href="todo.xhtml#_todo000003">Todo:</a></b></dt><dd>Should the buffer be unmapped even on failed status? </dd></dl>
 <dl class="todo"><dt><b><a class="el" href="todo.xhtml#_todo000004">Todo:</a></b></dt><dd>Support additional formats, hardwares, contexts, and strategies. </dd></dl>
 <dl class="todo"><dt><b><a class="el" href="todo.xhtml#_todo000005">Todo:</a></b></dt><dd>Resolution is a poor indicator of the need to re-initialized the filters. </dd></dl>
 <dl class="todo"><dt><b><a class="el" href="todo.xhtml#_todo000006">Todo:</a></b></dt><dd></dd></dl>
 <dl class="todo"><dt><b><a class="el" href="todo.xhtml#_todo000007">Todo:</a></b></dt><dd>Should this check be performed as an event, signal, or capabilities change instead of part of the transform? </dd></dl>
 <dl class="todo"><dt><b><a class="el" href="todo.xhtml#_todo000008">Todo:</a></b></dt><dd>Support in-place non-default construction to avoid the secondary initialization loop? </dd></dl>
+<dl class="todo"><dt><b><a class="el" href="todo.xhtml#_todo000009">Todo:</a></b></dt><dd>Use the timestamp of the frame if available? </dd></dl>
 
 <p class="definition">Definition at line <a class="el" href="gstkalman_8cpp_source.xhtml#l00201">201</a> of file <a class="el" href="gstkalman_8cpp_source.xhtml">gstkalman.cpp</a>.</p>
 <div class="fragment"><div class="line"><span class="lineno">  202</span>                                                                       {</div>
@@ -606,18 +608,18 @@ Variables</h2></td></tr>
 <div class="line"><span class="lineno">  254</span>                     <span class="keywordflow">return</span> pixel;</div>
 <div class="line"><span class="lineno">  255</span>                   });</div>
 <div class="line"><span class="lineno">  256</span>  } <span class="keywordflow">else</span> {</div>
-<div class="line"><span class="lineno">  257</span>    std::transform(std::execution::par_unseq, std::begin(pixels),</div>
-<div class="line"><span class="lineno">  258</span>                   std::end(pixels), std::begin(filters), std::begin(pixels),</div>
-<div class="line"><span class="lineno">  259</span>                   []&lt;<span class="keyword">typename</span> Pixel&gt;(<span class="keyword">const</span> Pixel &amp;pixel, <span class="keyword">auto</span> &amp;filter) {</div>
-<div class="line"><span class="lineno">  260</span>                     filter.update(pixel);</div>
-<div class="line"><span class="lineno">  261</span>                     <span class="keyword">using </span>limit = std::numeric_limits&lt;Pixel&gt;;</div>
-<div class="line"><span class="lineno">  262</span>                     <span class="keywordflow">return</span> std::clamp&lt;Pixel&gt;(filter.x(), limit::min(),</div>
-<div class="line"><span class="lineno">  263</span>                                              limit::max());</div>
-<div class="line"><span class="lineno">  264</span>                   });</div>
-<div class="line"><span class="lineno">  265</span>  }</div>
-<div class="line"><span class="lineno">  266</span> </div>
-<div class="line"><span class="lineno">  267</span>  <span class="keywordflow">return</span> GST_FLOW_OK;</div>
-<div class="line"><span class="lineno">  268</span>}</div>
+<div class="line"><span class="lineno">  258</span>    std::transform(std::execution::par_unseq, std::begin(pixels),</div>
+<div class="line"><span class="lineno">  259</span>                   std::end(pixels), std::begin(filters), std::begin(pixels),</div>
+<div class="line"><span class="lineno">  260</span>                   []&lt;<span class="keyword">typename</span> Pixel&gt;(<span class="keyword">const</span> Pixel &amp;pixel, <span class="keyword">auto</span> &amp;filter) {</div>
+<div class="line"><span class="lineno">  261</span>                     filter.update(pixel);</div>
+<div class="line"><span class="lineno">  262</span>                     <span class="keyword">using </span>limit = std::numeric_limits&lt;Pixel&gt;;</div>
+<div class="line"><span class="lineno">  263</span>                     <span class="keywordflow">return</span> std::clamp&lt;Pixel&gt;(filter.x(), limit::min(),</div>
+<div class="line"><span class="lineno">  264</span>                                              limit::max());</div>
+<div class="line"><span class="lineno">  265</span>                   });</div>
+<div class="line"><span class="lineno">  266</span>  }</div>
+<div class="line"><span class="lineno">  267</span> </div>
+<div class="line"><span class="lineno">  268</span>  <span class="keywordflow">return</span> GST_FLOW_OK;</div>
+<div class="line"><span class="lineno">  269</span>}</div>
 </div><!-- fragment -->
 <p class="reference">Referenced by <a class="el" href="gstkalman_8cpp_source.xhtml#l00124">gst_kalman_class_init()</a>.</p>
 <div id="dynsection-3" onclick="return toggleVisibility(this)" class="dynheader closed" style="cursor:pointer;">
@@ -980,7 +982,7 @@ Variables</h2></td></tr>
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
     <li class="navelem"><a class="el" href="namespaceanonymous__namespace_02gstkalman_8cpp_03.xhtml">anonymous_namespace{gstkalman.cpp}</a></li>
-    <li class="footer">Generated on Sun Jan 1 2023 05:00:39 for GstKalman by <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.4 </li>
+    <li class="footer">Generated on Thu Jan 5 2023 03:08:07 for GstKalman by <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.4 </li>
   </ul>
 </div>
 </body>

@@ -307,20 +307,20 @@ $(document).ready(function(){initNavTree('gstkalman_8cpp_source.xhtml',''); init
 <div class="line"><a id="l00254" name="l00254"></a><span class="lineno">  254</span>                     <span class="keywordflow">return</span> pixel;</div>
 <div class="line"><a id="l00255" name="l00255"></a><span class="lineno">  255</span>                   });</div>
 <div class="line"><a id="l00256" name="l00256"></a><span class="lineno">  256</span>  } <span class="keywordflow">else</span> {</div>
-<div class="line"><a id="l00257" name="l00257"></a><span class="lineno">  257</span>    std::transform(std::execution::par_unseq, std::begin(pixels),</div>
-<div class="line"><a id="l00258" name="l00258"></a><span class="lineno">  258</span>                   std::end(pixels), std::begin(filters), std::begin(pixels),</div>
-<div class="line"><a id="l00259" name="l00259"></a><span class="lineno">  259</span>                   []&lt;<span class="keyword">typename</span> Pixel&gt;(<span class="keyword">const</span> Pixel &amp;pixel, <span class="keyword">auto</span> &amp;filter) {</div>
-<div class="line"><a id="l00260" name="l00260"></a><span class="lineno">  260</span>                     filter.update(pixel);</div>
-<div class="line"><a id="l00261" name="l00261"></a><span class="lineno">  261</span>                     <span class="keyword">using </span>limit = std::numeric_limits&lt;Pixel&gt;;</div>
-<div class="line"><a id="l00262" name="l00262"></a><span class="lineno">  262</span>                     <span class="keywordflow">return</span> std::clamp&lt;Pixel&gt;(filter.x(), limit::min(),</div>
-<div class="line"><a id="l00263" name="l00263"></a><span class="lineno">  263</span>                                              limit::max());</div>
-<div class="line"><a id="l00264" name="l00264"></a><span class="lineno">  264</span>                   });</div>
-<div class="line"><a id="l00265" name="l00265"></a><span class="lineno">  265</span>  }</div>
-<div class="line"><a id="l00266" name="l00266"></a><span class="lineno">  266</span> </div>
-<div class="line"><a id="l00267" name="l00267"></a><span class="lineno">  267</span>  <span class="keywordflow">return</span> GST_FLOW_OK;</div>
-<div class="line"><a id="l00268" name="l00268"></a><span class="lineno">  268</span>}</div>
-<div class="line"><a id="l00269" name="l00269"></a><span class="lineno">  269</span> </div>
-<div class="line"><a id="l00270" name="l00270"></a><span class="lineno">  270</span>} <span class="comment">// namespace</span></div>
+<div class="line"><a id="l00258" name="l00258"></a><span class="lineno">  258</span>    std::transform(std::execution::par_unseq, std::begin(pixels),</div>
+<div class="line"><a id="l00259" name="l00259"></a><span class="lineno">  259</span>                   std::end(pixels), std::begin(filters), std::begin(pixels),</div>
+<div class="line"><a id="l00260" name="l00260"></a><span class="lineno">  260</span>                   []&lt;<span class="keyword">typename</span> Pixel&gt;(<span class="keyword">const</span> Pixel &amp;pixel, <span class="keyword">auto</span> &amp;filter) {</div>
+<div class="line"><a id="l00261" name="l00261"></a><span class="lineno">  261</span>                     filter.update(pixel);</div>
+<div class="line"><a id="l00262" name="l00262"></a><span class="lineno">  262</span>                     <span class="keyword">using </span>limit = std::numeric_limits&lt;Pixel&gt;;</div>
+<div class="line"><a id="l00263" name="l00263"></a><span class="lineno">  263</span>                     <span class="keywordflow">return</span> std::clamp&lt;Pixel&gt;(filter.x(), limit::min(),</div>
+<div class="line"><a id="l00264" name="l00264"></a><span class="lineno">  264</span>                                              limit::max());</div>
+<div class="line"><a id="l00265" name="l00265"></a><span class="lineno">  265</span>                   });</div>
+<div class="line"><a id="l00266" name="l00266"></a><span class="lineno">  266</span>  }</div>
+<div class="line"><a id="l00267" name="l00267"></a><span class="lineno">  267</span> </div>
+<div class="line"><a id="l00268" name="l00268"></a><span class="lineno">  268</span>  <span class="keywordflow">return</span> GST_FLOW_OK;</div>
+<div class="line"><a id="l00269" name="l00269"></a><span class="lineno">  269</span>}</div>
+<div class="line"><a id="l00270" name="l00270"></a><span class="lineno">  270</span> </div>
+<div class="line"><a id="l00271" name="l00271"></a><span class="lineno">  271</span>} <span class="comment">// namespace</span></div>
 <div class="ttc" id="anamespaceanonymous__namespace_02gstkalman_8cpp_03_xhtml_a19a3044921a1d780ed647dfe4b03f881"><div class="ttname"><a href="namespaceanonymous__namespace_02gstkalman_8cpp_03.xhtml#a19a3044921a1d780ed647dfe4b03f881">anonymous_namespace{gstkalman.cpp}::origin</a></div><div class="ttdeci">constexpr std::string_view origin</div><div class="ttdef"><b>Definition:</b> <a href="gstkalman_8cpp_source.xhtml#l00091">gstkalman.cpp:91</a></div></div>
 <div class="ttc" id="anamespaceanonymous__namespace_02gstkalman_8cpp_03_xhtml_a282faaab85877b074d23a1057e361d20"><div class="ttname"><a href="namespaceanonymous__namespace_02gstkalman_8cpp_03.xhtml#a282faaab85877b074d23a1057e361d20">anonymous_namespace{gstkalman.cpp}::initialize</a></div><div class="ttdeci">auto initialize(GstPlugin *plugin) -&gt; gboolean</div><div class="ttdoc">Registers the plugin element.</div><div class="ttdef"><b>Definition:</b> <a href="gstkalman_8cpp_source.xhtml#l00116">gstkalman.cpp:116</a></div></div>
 <div class="ttc" id="anamespaceanonymous__namespace_02gstkalman_8cpp_03_xhtml_a29bac156c28c7613bee4b9a434ce5aef"><div class="ttname"><a href="namespaceanonymous__namespace_02gstkalman_8cpp_03.xhtml#a29bac156c28c7613bee4b9a434ce5aef">anonymous_namespace{gstkalman.cpp}::property</a></div><div class="ttdeci">property</div><div class="ttdoc">The GStreamer Kalman filter element properties.</div><div class="ttdef"><b>Definition:</b> <a href="gstkalman_8cpp_source.xhtml#l00081">gstkalman.cpp:81</a></div></div>
@@ -355,7 +355,7 @@ $(document).ready(function(){initNavTree('gstkalman_8cpp_source.xhtml',''); init
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
     <li class="navelem"><a class="el" href="dir_b2f33c71d4aa5e7af42a1ca61ff5af1b.xhtml">source</a></li><li class="navelem"><a class="el" href="gstkalman_8cpp.xhtml">gstkalman.cpp</a></li>
-    <li class="footer">Generated on Sun Jan 1 2023 05:00:39 for GstKalman by <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.4 </li>
+    <li class="footer">Generated on Thu Jan 5 2023 03:08:07 for GstKalman by <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.4 </li>
   </ul>
 </div>
 </body>
