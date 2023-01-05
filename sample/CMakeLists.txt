@@ -37,6 +37,7 @@ OTHER DEALINGS IN THE SOFTWARE.
 For more information, please refer to <https://unlicense.org> ]]
 
 add_executable(gstkalman_sample_application_driver "application.cpp")
+add_dependencies(gstkalman_sample_application_driver gstkalman_library)
 target_link_libraries(
   gstkalman_sample_application_driver
   PRIVATE gstkalman gstkalman_glib gstkalman_gobject gstkalman_gstreamer
