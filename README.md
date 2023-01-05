@@ -1,5 +1,28 @@
 # A GStreamer Kalman Filter Video Plugin in C++
 
+GStreamer is a pipeline-based multimedia framework that links together a wide variety of media processing systems to complete complex workflows. The Kalman filter is a Bayesian filter that uses multivariate Gaussians.
+
+This library applies a single precision, no input, constant system dynamic model Kalman filter to the pixels of the frames of a raw video stream with computation performed on CPU with an opportunity for diverse execution parallelisms.
+
+The GStreamer inspected plugin information:
+```
+Plugin Details:
+  Name                     kalman
+  Description              A video Kalman filter plugin.
+  Filename                 build/source/libgstkalman.so
+  Version                  0.1.0
+  License                  Unlicense
+  Source module            kalman
+  Binary package           kalman
+  Origin URL               https://github.com/FrancoisCarouge/GstKalman
+
+  kalman: Kalman Filter
+
+  1 features:
+  +-- 1 elements
+```
+
+The GStreamer inspected sole element information:
 ```
 Factory Details:
   Rank                     none (0)
@@ -82,6 +105,15 @@ gst-launch-1.0 uridecodebin uri="file:///path/to/roundhay_garden.mp4" ! videocon
 ```
 
 # Installation
+
+```shell
+git clone --depth 1 "https://github.com/FrancoisCarouge/gstkalman"
+cmake -S "gstkalman" -B "build"
+cmake --build "build" --parallel
+sudo cmake --install "build"
+```
+
+[For more, see installation instructions](INSTALL.md).
 
 # Reference
 

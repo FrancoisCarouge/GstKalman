@@ -254,6 +254,7 @@ auto gst_kalman_transform_in_place(GstBaseTransform *element_base,
                      return pixel;
                    });
   } else {
+    //! @todo Use the timestamp of the frame if available?
     std::transform(std::execution::par_unseq, std::begin(pixels),
                    std::end(pixels), std::begin(filters), std::begin(pixels),
                    []<typename Pixel>(const Pixel &pixel, auto &filter) {

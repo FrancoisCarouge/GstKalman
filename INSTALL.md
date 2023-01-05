@@ -1,5 +1,9 @@
 # Installation
 
+## Prerequisite
+
+Install [Gstreamer](https://gstreamer.freedesktop.org/).
+
 ## From Repository Sources
 
 Install and use the library in your projects by cloning the repository, configuring, and installing the project on all platforms:
