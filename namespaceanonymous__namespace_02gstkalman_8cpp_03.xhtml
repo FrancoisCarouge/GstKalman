@@ -602,7 +602,7 @@ Variables</h2></td></tr>
 <div class="line"><span class="lineno">  248</span>    std::transform(std::execution::par_unseq, std::begin(pixels),</div>
 <div class="line"><span class="lineno">  249</span>                   std::end(pixels), std::begin(filters), std::begin(pixels),</div>
 <div class="line"><span class="lineno">  250</span>                   [element](<span class="keyword">const</span> <span class="keyword">auto</span> &amp;pixel, <span class="keyword">auto</span> &amp;filter) {</div>
-<div class="line"><span class="lineno">  251</span>                     filter.x(pixel);</div>
+<div class="line"><span class="lineno">  251</span>                     filter.x(<span class="keyword">static_cast&lt;</span>typename kalman::state<span class="keyword">&gt;</span>(pixel));</div>
 <div class="line"><span class="lineno">  252</span>                     filter.p(element-&gt;p);</div>
 <div class="line"><span class="lineno">  253</span>                     filter.r(element-&gt;r);</div>
 <div class="line"><span class="lineno">  254</span>                     <span class="keywordflow">return</span> pixel;</div>
@@ -611,7 +611,7 @@ Variables</h2></td></tr>
 <div class="line"><span class="lineno">  258</span>    std::transform(std::execution::par_unseq, std::begin(pixels),</div>
 <div class="line"><span class="lineno">  259</span>                   std::end(pixels), std::begin(filters), std::begin(pixels),</div>
 <div class="line"><span class="lineno">  260</span>                   []&lt;<span class="keyword">typename</span> Pixel&gt;(<span class="keyword">const</span> Pixel &amp;pixel, <span class="keyword">auto</span> &amp;filter) {</div>
-<div class="line"><span class="lineno">  261</span>                     filter.update(pixel);</div>
+<div class="line"><span class="lineno">  261</span>                     filter.update(<span class="keyword">static_cast&lt;</span>typename kalman::output<span class="keyword">&gt;</span>(pixel));</div>
 <div class="line"><span class="lineno">  262</span>                     <span class="keyword">using </span>limit = std::numeric_limits&lt;Pixel&gt;;</div>
 <div class="line"><span class="lineno">  263</span>                     <span class="keywordflow">return</span> std::clamp&lt;Pixel&gt;(filter.x(), limit::min(),</div>
 <div class="line"><span class="lineno">  264</span>                                              limit::max());</div>
@@ -982,7 +982,7 @@ Variables</h2></td></tr>
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
     <li class="navelem"><a class="el" href="namespaceanonymous__namespace_02gstkalman_8cpp_03.xhtml">anonymous_namespace{gstkalman.cpp}</a></li>
-    <li class="footer">Generated on Thu Jan 5 2023 03:55:56 for GstKalman by <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.4 </li>
+    <li class="footer">Generated on Fri Jan 6 2023 06:18:16 for GstKalman by <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.4 </li>
   </ul>
 </div>
 </body>
