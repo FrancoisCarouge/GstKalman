@@ -57,7 +57,6 @@ include(FindPackageHandleStandardArgs)
 
 find_package(PkgConfig)
 
-find_package(fmt)
 find_package(GLib)
 find_package(GObject)
 find_package(GStreamer)
