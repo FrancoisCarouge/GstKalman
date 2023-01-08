@@ -89,13 +89,11 @@ Element Properties:
 - [A GStreamer Kalman Filter Video Plugin in C++](#a-gstreamer-kalman-filter-video-plugin-in-c)
 - [Examples](#examples)
 - [Installation](#installation)
-- [Reference](#reference)
 - [Resources](#resources)
-- [Continuous Integration \& Deployment Actions](#continuous-integration--deployment-actions)
-- [Third Party Acknowledgement](#third-party-acknowledgement)
-- [Sponsors](#sponsors)
-  - [Corporate Sponsor](#corporate-sponsor)
-  - [Named Sponsors](#named-sponsors)
+  - [Third Party Acknowledgement](#third-party-acknowledgement)
+  - [Sponsors](#sponsors)
+    - [Corporations \& Institutions](#corporations--institutions)
+    - [Individuals](#individuals)
 - [License](#license)
 
 # Examples
@@ -115,25 +113,36 @@ sudo cmake --install "build"
 
 [For more, see installation instructions](INSTALL.md).
 
-# Reference
-
 # Resources
 
-# Continuous Integration & Deployment Actions
+## Third Party Acknowledgement
 
-# Third Party Acknowledgement
+The library is designed, developed, and tested with the help of third-party tools and services acknowledged and thanked here:
 
-# Sponsors
+- [actions-gh-pages](https://github.com/peaceiris/actions-gh-pages) to upload the documentation to GitHub pages.
+- [Clang](https://clang.llvm.org) for compilation and code sanitizers.
+- [CMake](https://cmake.org) for build automation.
+- [cmakelang](https://pypi.org/project/cmakelang) for pretty CMake list files.
+- [Coveralls](https://coveralls.io) to measure [code coverage](https://coveralls.io/github/FrancoisCarouge/Kalman).
+- [cppcheck](https://cppcheck.sourceforge.io) for static analysis.
+- [Doxygen](https://doxygen.nl) for documentation generation.
+- [Doxygen Awesome](https://github.com/jothepro/doxygen-awesome-css) for pretty documentation.
+- [GCC](https://gcc.gnu.org) for compilation and code sanitizers.
+- [lcov](http://ltp.sourceforge.net/coverage/lcov.php) to process coverage information.
+- [MSVC](https://docs.microsoft.com/en-US/cpp/windows/latest-supported-vc-redist) for compilation and code sanitizers.
+- [Valgrind](https://valgrind.org) to check for correct memory management.
+
+## Sponsors
 
 Become a sponsor today! Support this project with coffee and infrastructure!
 
 [![Sponsor](https://img.shields.io/badge/Support-Sponsor-brightgreen)](http://paypal.me/francoiscarouge)
 
-## Corporate Sponsor
+### Corporations & Institutions
 
-*You company logo and link here!*
+*Your group logo and link here!*
 
-## Named Sponsors
+### Individuals
 
 *Your name and link here!*
 
