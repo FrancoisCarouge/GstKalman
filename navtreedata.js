@@ -26,31 +26,30 @@ var NAVTREE =
 [
   [ "GstKalman", "index.xhtml", [
     [ "A GStreamer Kalman Filter Video Plugin in C++", "index.xhtml", [
-      [ "Examples", "index.xhtml#autotoc_md20", null ],
-      [ "Installation", "index.xhtml#autotoc_md21", null ],
-      [ "Reference", "index.xhtml#autotoc_md22", null ],
-      [ "Resources", "index.xhtml#autotoc_md23", null ],
-      [ "Continuous Integration & Deployment Actions", "index.xhtml#autotoc_md24", null ],
-      [ "Third Party Acknowledgement", "index.xhtml#autotoc_md25", null ],
-      [ "Sponsors", "index.xhtml#autotoc_md26", [
-        [ "Corporate Sponsor", "index.xhtml#autotoc_md27", null ],
-        [ "Named Sponsors", "index.xhtml#autotoc_md28", null ]
+      [ "Examples", "index.xhtml#autotoc_md23", null ],
+      [ "Installation", "index.xhtml#autotoc_md24", null ],
+      [ "Resources", "index.xhtml#autotoc_md25", [
+        [ "Third Party Acknowledgement", "index.xhtml#autotoc_md26", null ],
+        [ "Sponsors", "index.xhtml#autotoc_md27", [
+          [ "Corporations & Institutions", "index.xhtml#autotoc_md28", null ],
+          [ "Individuals", "index.xhtml#autotoc_md29", null ]
+        ] ]
       ] ],
-      [ "License", "index.xhtml#autotoc_md29", null ]
+      [ "License", "index.xhtml#autotoc_md30", null ]
     ] ],
     [ "Contributor Covenant Code of Conduct", "md__github_workspace__c_o_d_e__o_f__c_o_n_d_u_c_t.xhtml", [
-      [ "Our Pledge", "md__github_workspace__c_o_d_e__o_f__c_o_n_d_u_c_t.xhtml#autotoc_md1", null ],
-      [ "Our Standards", "md__github_workspace__c_o_d_e__o_f__c_o_n_d_u_c_t.xhtml#autotoc_md2", null ],
-      [ "Our Responsibilities", "md__github_workspace__c_o_d_e__o_f__c_o_n_d_u_c_t.xhtml#autotoc_md3", null ],
-      [ "Scope", "md__github_workspace__c_o_d_e__o_f__c_o_n_d_u_c_t.xhtml#autotoc_md4", null ],
-      [ "Enforcement", "md__github_workspace__c_o_d_e__o_f__c_o_n_d_u_c_t.xhtml#autotoc_md5", null ],
-      [ "Attribution", "md__github_workspace__c_o_d_e__o_f__c_o_n_d_u_c_t.xhtml#autotoc_md6", null ]
+      [ "Our Pledge", "md__github_workspace__c_o_d_e__o_f__c_o_n_d_u_c_t.xhtml#autotoc_md2", null ],
+      [ "Our Standards", "md__github_workspace__c_o_d_e__o_f__c_o_n_d_u_c_t.xhtml#autotoc_md5", null ],
+      [ "Our Responsibilities", "md__github_workspace__c_o_d_e__o_f__c_o_n_d_u_c_t.xhtml#autotoc_md8", null ],
+      [ "Scope", "md__github_workspace__c_o_d_e__o_f__c_o_n_d_u_c_t.xhtml#autotoc_md9", null ],
+      [ "Enforcement", "md__github_workspace__c_o_d_e__o_f__c_o_n_d_u_c_t.xhtml#autotoc_md10", null ],
+      [ "Attribution", "md__github_workspace__c_o_d_e__o_f__c_o_n_d_u_c_t.xhtml#autotoc_md11", null ]
     ] ],
     [ "Contributing", "md__github_workspace__c_o_n_t_r_i_b_u_t_i_n_g.xhtml", [
-      [ "Code of Conduct", "md__github_workspace__c_o_n_t_r_i_b_u_t_i_n_g.xhtml#autotoc_md8", null ],
-      [ "Reporting Bugs", "md__github_workspace__c_o_n_t_r_i_b_u_t_i_n_g.xhtml#autotoc_md9", null ],
-      [ "Requesting Features", "md__github_workspace__c_o_n_t_r_i_b_u_t_i_n_g.xhtml#autotoc_md10", null ],
-      [ "Security Policy", "md__github_workspace__c_o_n_t_r_i_b_u_t_i_n_g.xhtml#autotoc_md11", null ]
+      [ "Code of Conduct", "md__github_workspace__c_o_n_t_r_i_b_u_t_i_n_g.xhtml#autotoc_md3", null ],
+      [ "Reporting Bugs", "md__github_workspace__c_o_n_t_r_i_b_u_t_i_n_g.xhtml#autotoc_md4", null ],
+      [ "Requesting Features", "md__github_workspace__c_o_n_t_r_i_b_u_t_i_n_g.xhtml#autotoc_md6", null ],
+      [ "Security Policy", "md__github_workspace__c_o_n_t_r_i_b_u_t_i_n_g.xhtml#autotoc_md7", null ]
     ] ],
     [ "Installation", "md__github_workspace__i_n_s_t_a_l_l.xhtml", [
       [ "Prerequisite", "md__github_workspace__i_n_s_t_a_l_l.xhtml#autotoc_md13", null ],
@@ -63,8 +62,8 @@ var NAVTREE =
       ] ]
     ] ],
     [ "Security Policy", "md__github_workspace__s_e_c_u_r_i_t_y.xhtml", [
-      [ "Supported Versions", "md__github_workspace__s_e_c_u_r_i_t_y.xhtml#autotoc_md31", null ],
-      [ "Reporting a Vulnerability", "md__github_workspace__s_e_c_u_r_i_t_y.xhtml#autotoc_md32", null ]
+      [ "Supported Versions", "md__github_workspace__s_e_c_u_r_i_t_y.xhtml#autotoc_md21", null ],
+      [ "Reporting a Vulnerability", "md__github_workspace__s_e_c_u_r_i_t_y.xhtml#autotoc_md22", null ]
     ] ],
     [ "Todo List", "todo.xhtml", null ],
     [ "Namespaces", "namespaces.xhtml", [
