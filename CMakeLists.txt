@@ -66,7 +66,6 @@ find_package(TBB)
 FetchContent_Declare(
   kalman
   GIT_REPOSITORY "https://github.com/FrancoisCarouge/kalman"
-  GIT_TAG "develop"
   FIND_PACKAGE_ARGS NAMES kalman)
 FetchContent_MakeAvailable(kalman)
 
