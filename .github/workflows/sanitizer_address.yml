@@ -15,6 +15,7 @@ jobs:
     - name: Install
       # https://bugs.launchpad.net/ubuntu/+source/llvm-toolchain-14/+bug/1989124
       run: |
+        sudo apt update
         sudo apt remove -y libunwind-14-dev
         sudo apt install gcc-12 g++-12 \
           libgstreamer1.0-dev \
