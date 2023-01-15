@@ -5,7 +5,7 @@
 | . \  / ____ \| |____| |  | |/ ____ \| |\  |
 |_|\_\/_/    \_\______|_|  |_/_/    \_\_| \_|
 
-GStreamer Kalman Filter Video Plugin in C++
+GStreamer Kalman Filter Video Plugin
 Version 0.1.0
 https://github.com/FrancoisCarouge/GstKalman
 
