@@ -1,0 +1,74 @@
+name: "Deploy Code Coverage: Coveralls"
+
+on:
+  push:
+    branches: [ master ]
+  pull_request:
+    branches: [ master ]
+
+jobs:
+  build:
+    runs-on: ubuntu-22.04
+    steps:
+    - name: Checkout
+      uses: actions/checkout@v3.1.0
+    - name: Install
+      # https://bugs.launchpad.net/ubuntu/+source/llvm-toolchain-14/+bug/1989124
+      run: |
+        sudo apt update
+        sudo apt remove -y libunwind-14-dev
+        sudo apt install gcc-12 g++-12 lcov \
+          libgstreamer1.0-dev \
+          libgstreamer-plugins-base1.0-dev \
+          libtbb2-dev
+        ( cd /tmp
+          git clone --depth 1 "https://github.com/FrancoisCarouge/kalman"
+          cmake -S "kalman" -B "kalman/build"
+          cmake --build "kalman/build" --parallel 4
+          sudo cmake --install "kalman/build" )
+        ( cd /tmp
+          git clone --depth 1 "https://github.com/catchorg/catch2"
+          cmake -S "catch2" -B "catch2/build"
+          cmake --build "catch2/build" --parallel 4
+          sudo cmake --install "catch2/build" )
+        ( cd /tmp
+          git clone --depth 1 "https://github.com/rollbear/trompeloeil"
+          cmake -S "trompeloeil" -B "trompeloeil/build"
+          cmake --build "trompeloeil/build" --parallel 4
+          sudo cmake --install "trompeloeil/build" )
+        ( cd /tmp
+          git clone --depth 1 "https://github.com/offa/scope-guard"
+          cmake -S "scope-guard" -B "scope-guard/build"
+          cmake --build "scope-guard/build" --parallel 4
+          sudo cmake --install "scope-guard/build" )
+    - name: Build
+      run: |
+        export CXXFLAGS="-O0 -g --coverage -fno-inline"
+        cmake -B "build" .
+        cmake --build "build" --parallel 4
+        export GST_PLUGIN_PATH="$(pwd)/build/source"
+        echo $GST_PLUGIN_PATH
+        ( cd build 
+          ll )
+        ctest --test-dir "build" --tests-regex "gstkalman_sample" --output-on-failure --parallel 4
+    - name: "Coverage: Base"
+      run: |
+        lcov --rc lcov_branch_coverage=1 --gcov-tool gcov-12 --capture --initial --directory . --output-file base.info
+        lcov --rc lcov_branch_coverage=1 --gcov-tool gcov-12 --remove base.info '/usr/*' --output-file base.info
+        lcov --rc lcov_branch_coverage=1 --gcov-tool gcov-12 --remove base.info '10' --output-file base.info
+        lcov --rc lcov_branch_coverage=1 --gcov-tool gcov-12 --remove base.info '*/source/*' --output-file base.info
+    - name: run
+      run: ./a.out
+    - name: "Coverage: Test"
+      run: |
+        lcov --rc lcov_branch_coverage=1 --gcov-tool gcov-12 --capture --directory . --output-file test.info
+        lcov --rc lcov_branch_coverage=1 --gcov-tool gcov-12 --remove test.info '/usr/*' --output-file test.info
+        lcov --rc lcov_branch_coverage=1 --gcov-tool gcov-12 --remove test.info '10' --output-file test.info
+        lcov --rc lcov_branch_coverage=1 --gcov-tool gcov-12 --remove test.info '*/source/*' --output-file test.info
+    - name: "Coverage: Results"
+      run: lcov --rc lcov_branch_coverage=1 --gcov-tool gcov-12 --rc lcov_branch_coverage=1 --add-tracefile base.info --add-tracefile test.info --output-file coverage.info
+    - name: Coveralls
+      uses: coverallsapp/github-action@1.1.3
+      with:
+        github-token: ${{ secrets.GITHUB_TOKEN }}
+        path-to-lcov: coverage.info
