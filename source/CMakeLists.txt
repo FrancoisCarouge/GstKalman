@@ -79,8 +79,12 @@ target_link_libraries(
                             gstkalman_gstreamer kalman::kalman TBB::tbb)
 install(
   TARGETS gstkalman_library
-  EXPORT gstkalmanTargets
+  EXPORT "gstkalman-target"
   DESTINATION ${CMAKE_INSTALL_LIBDIR})
+install(
+  EXPORT "gstkalman-target"
+  NAMESPACE "gstkalman::"
+  DESTINATION "${CMAKE_INSTALL_DATADIR}/gstkalman/cmake")
 
 add_library(gstkalman_main "main.cpp")
 target_link_libraries(gstkalman_main PRIVATE gstkalman)
