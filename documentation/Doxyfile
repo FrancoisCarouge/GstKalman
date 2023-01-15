@@ -6,7 +6,7 @@
 DOXYFILE_ENCODING      = UTF-8
 PROJECT_NAME           = GstKalman
 PROJECT_NUMBER         = 0.1.0
-PROJECT_BRIEF          = "GStreamer Kalman Filter Video Plugin in C++"
+PROJECT_BRIEF          = "GStreamer Kalman Filter Video Plugin"
 PROJECT_LOGO           =
 OUTPUT_DIRECTORY       = .
 CREATE_SUBDIRS         = NO

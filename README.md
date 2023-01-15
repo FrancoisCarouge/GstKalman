@@ -1,4 +1,4 @@
-# A GStreamer Kalman Filter Video Plugin in C++
+# A GStreamer Kalman Filter Video Plugin
 
 GStreamer is a pipeline-based multimedia framework that links together a wide variety of media processing systems to complete complex workflows. The Kalman filter is a Bayesian filter that uses multivariate Gaussians.
 
@@ -86,7 +86,7 @@ Element Properties:
                         Float. Range:               0 -    3.402823e+38 Default:               0 
 ```
 
-- [A GStreamer Kalman Filter Video Plugin in C++](#a-gstreamer-kalman-filter-video-plugin-in-c)
+- [A GStreamer Kalman Filter Video Plugin](#a-gstreamer-kalman-filter-video-plugin-in-c)
 - [Examples](#examples)
 - [Installation](#installation)
 - [Resources](#resources)
@@ -152,7 +152,7 @@ Thanks everyone!
 
 <img align="right" src="http://opensource.org/trademarks/opensource/OSI-Approved-License-100x137.png">
 
-GStreamer Kalman Filter Video Plugin in C++ is public domain:
+GStreamer Kalman Filter Video Plugin is public domain:
 
 This is free and unencumbered software released into the public domain.
 

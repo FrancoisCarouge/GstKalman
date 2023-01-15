@@ -5,7 +5,7 @@
 | . \  / ____ \| |____| |  | |/ ____ \| |\  |
 |_|\_\/_/    \_\______|_|  |_/_/    \_\_| \_|
 
-GStreamer Kalman Filter Video Plugin in C++
+GStreamer Kalman Filter Video Plugin
 Version 0.1.0
 https://github.com/FrancoisCarouge/GstKalman
 
@@ -40,7 +40,7 @@ cmake_minimum_required(VERSION "3.24")
 
 project(
   gstkalman
-  DESCRIPTION "GStreamer Kalman Filter Video Plugin in C++"
+  DESCRIPTION "GStreamer Kalman Filter Video Plugin"
   HOMEPAGE_URL "https://github.com/FrancoisCarouge/GstKalman"
   LANGUAGES "CXX"
   VERSION "0.1.0")
