@@ -25,11 +25,6 @@ jobs:
           cmake -S "catch2" -B "catch2/build"
           cmake --build "catch2/build" --parallel 4
           sudo cmake --install "catch2/build" )
-        ( cd /tmp
-          git clone --depth 1 "https://github.com/rollbear/trompeloeil"
-          cmake -S "trompeloeil" -B "trompeloeil/build"
-          cmake --build "trompeloeil/build" --parallel 4
-          sudo cmake --install "trompeloeil/build" )
     - name: Build
       run: |
         export CC=clang
