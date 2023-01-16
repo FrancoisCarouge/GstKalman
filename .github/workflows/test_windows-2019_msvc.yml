@@ -1,0 +1,26 @@
+name: "Test: Windows 2019 MSVC"
+
+on:
+  push:
+    branches: [ master ]
+  pull_request:
+    branches: [ master ]
+
+jobs:
+  build:
+    runs-on: windows-2019
+    steps:
+    - name: Checkout
+      uses: actions/checkout@v3.1.0
+    - name: Install
+      uses: ilammy/msvc-dev-cmd@v1.12.0
+    - name: Version
+      run: cl
+    - name: Install
+      run: |
+        vcpkg --triplet x64-windows install tbb catch2
+    - name: Build
+      run: |
+        cmake -B "build" . -DCMAKE_TOOLCHAIN_FILE="C:/vcpkg/scripts/buildsystems/vcpkg.cmake"
+        cmake --build "build" --parallel 4
+        ctest --test-dir "build" --tests-regex "gstkalman_sample" --output-on-failure --parallel 4
