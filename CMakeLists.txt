@@ -62,6 +62,14 @@ find_package(GObject)
 find_package(GStreamer)
 find_package(TBB)
 
+# TODO: Upstream trompeloeil transient dependency into scope-guard.
+FetchContent_Declare(
+  trompeloeil
+  GIT_REPOSITORY "https://github.com/rollbear/trompeloeil"
+  GIT_TAG "main"
+  FIND_PACKAGE_ARGS NAMES trompeloeil)
+FetchContent_MakeAvailable(trompeloeil)
+
 FetchContent_Declare(
   ScopeGuard
   GIT_REPOSITORY "https://github.com/offa/scope-guard"
