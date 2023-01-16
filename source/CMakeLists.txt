@@ -67,16 +67,19 @@ endif()
 add_library(gstkalman INTERFACE)
 target_compile_options(gstkalman INTERFACE ${OPTIONS})
 target_compile_features(gstkalman INTERFACE cxx_std_23)
-target_link_libraries(
-  gstkalman INTERFACE gstkalman_glib gstkalman_gobject gstkalman_gstreamer
-                      kalman::kalman TBB::tbb)
 
 add_library(gstkalman_library SHARED "gstkalman.cpp")
 set_target_properties(gstkalman_library PROPERTIES OUTPUT_NAME "gstkalman")
 target_compile_definitions(gstkalman_library PRIVATE PACKAGE="kalman")
 target_link_libraries(
-  gstkalman_library PRIVATE gstkalman gstkalman_glib gstkalman_gobject
-                            gstkalman_gstreamer kalman::kalman TBB::tbb)
+  gstkalman_library
+  PRIVATE gstkalman
+          gstkalman_glib
+          gstkalman_gobject
+          gstkalman_gstreamer
+          kalman::kalman
+          ScopeGuard
+          TBB::tbb)
 install(
   TARGETS gstkalman_library
   EXPORT "gstkalman-target"

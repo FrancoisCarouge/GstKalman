@@ -60,8 +60,13 @@ find_package(PkgConfig)
 find_package(GLib)
 find_package(GObject)
 find_package(GStreamer)
-find_package(ScopeGuard)
 find_package(TBB)
+
+FetchContent_Declare(
+  ScopeGuard
+  GIT_REPOSITORY "https://github.com/offa/scope-guard"
+  FIND_PACKAGE_ARGS NAMES ScopeGuard)
+FetchContent_MakeAvailable(ScopeGuard)
 
 FetchContent_Declare(
   kalman

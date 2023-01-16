@@ -41,5 +41,5 @@ add_dependencies(gstkalman_sample_application_driver gstkalman_library)
 target_link_libraries(
   gstkalman_sample_application_driver
   PRIVATE gstkalman gstkalman_glib gstkalman_gobject gstkalman_gstreamer
-          gstkalman_main)
+          gstkalman_main ScopeGuard)
 add_test(gstkalman_sample_application gstkalman_sample_application_driver)
